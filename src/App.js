@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Company/Home';
+import About from './Company/About';
+import Service from './Company/Service';
+import Gallery from './Company/Gallery';
+import Contact from './Company/Contact';
+import SecurityGuard from './Company/services/SecurityGuard';
+import CctvCameras from './Company/services/CctvCameras';
+import MetalDetector from './Company/services/MetalDetector';
+import AlarmSystems from './Company/services/AlarmSystems';
+import ConsultingServices from './Company/services/ConsultingServices';
+import AccessControl from './Company/AccessControl';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/services/security-guard" element={<SecurityGuard />} />
+        <Route path="/cctv-cameras" element={<CctvCameras />} />
+        <Route path="/services/metal-detector" element={<MetalDetector />} />
+        <Route path="/services/alarm-systems" element={<AlarmSystems />} />
+        <Route path="/access-control" element={<AccessControl />} />
+        <Route path="/services/consulting" element={<ConsultingServices />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
