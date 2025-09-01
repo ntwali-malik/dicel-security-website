@@ -44,11 +44,11 @@ function Contact() {
                         </button>
                         <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="/" className="nav-item nav-link active text-secondary">Home</a>
+                                <a href="/" className="nav-item nav-link">Home</a>
                                 <a href="/about" className="nav-item nav-link">About</a>
                                 <a href="/services" className="nav-item nav-link">Services</a>
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
-                                <a href="/contact" className="nav-item nav-link">Contact</a>
+                                <a href="/contact" className="nav-item active nav-link">Contact</a>
                             </div>
                         </div>
                         <div className="d-none d-xl-flex flex-shirink-0">
