@@ -35,7 +35,8 @@ function Home() {
                     <nav className="navbar navbar-dark navbar-expand-lg py-0">
                         <a href="/" className="navbar-brand d-flex align-items-center">
                             <img src="assets/img/logo.png" alt="Company Logo" style={{ height: "48px", width: "auto" }} />
-                            <span className="ms-2 text-white fw-bold">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-none d-md-inline">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-inline d-md-none">Dicel Sec. Comp</span>
                         </a>
                         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
@@ -85,10 +86,10 @@ function Home() {
                                     <h1 className="text-white display-1 mb-4 animated fadeInRight">Comprehensive Security Services for Your Peace of Mind
                                     </h1>
                                     <p className="mb-4 text-white fs-5 animated fadeInDown">Professional guards, CCTV installation and monitoring, access control, and 24/7 patrols tailored to safeguard your people, property, and assets.</p>
-                                    <a href="#services" className="me-2"><button type="button"
+                                    <a href="/services" className="me-2"><button type="button"
                                         className="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Our
                                         Services</button></a>
-                                    <a href="#contact" className="ms-2"><button type="button"
+                                    <a href="/contact" className="ms-2"><button type="button"
                                         className="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Get a
                                         Quote</button></a>
                                 </div>
@@ -175,7 +176,7 @@ function Home() {
                             <p>One driving force behind Dicel Security Company Ltd philosophy is to provide security to organizations in the region with leading innovative security solutions at affordable cost for their competitiveness.</p>
                             <h5 className="mt-3">Vision</h5>
                             <p className="mb-4">The vision of the Dicel Security Company Ltd is to grow and become a leading security company at national and International level by extending its services in all areas of the Country and abroad.</p>
-                            <a href="#about" className="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a>
+                            <a href="/about" className="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a>
                         </div>
                     </div>
                 </div>

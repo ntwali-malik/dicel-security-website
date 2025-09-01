@@ -4,12 +4,12 @@ import About from './Company/About';
 import Service from './Company/Service';
 import Gallery from './Company/Gallery';
 import Contact from './Company/Contact';
-import SecurityGuard from './Company/services/SecurityGuard';
 import CctvCameras from './Company/services/CctvCameras';
 import MetalDetector from './Company/services/MetalDetector';
 import AlarmSystems from './Company/services/AlarmSystems';
 import ConsultingServices from './Company/services/ConsultingServices';
 import AccessControl from './Company/AccessControl';
+import SecurityGuard from './Company/SecurityGuard';
 
 
 function App() {
@@ -19,12 +19,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Service />} />
-        <Route path="/services/security-guard" element={<SecurityGuard />} />
+        <Route path="/security-guard" element={<SecurityGuard />} />
         <Route path="/cctv-cameras" element={<CctvCameras />} />
-        <Route path="/services/metal-detector" element={<MetalDetector />} />
-        <Route path="/services/alarm-systems" element={<AlarmSystems />} />
+        <Route path="/metal-detector" element={<MetalDetector />} />
+        <Route path="/alarm-systems" element={<AlarmSystems />} />
         <Route path="/access-control" element={<AccessControl />} />
-        <Route path="/services/consulting" element={<ConsultingServices />} />
+        <Route path="/consulting" element={<ConsultingServices />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

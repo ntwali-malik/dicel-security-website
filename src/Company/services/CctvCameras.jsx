@@ -260,7 +260,8 @@ function CctvCameras() {
                     <nav className="navbar navbar-dark navbar-expand-lg py-0">
                         <a href="/" className="navbar-brand d-flex align-items-center">
                             <img src="assets/img/logo.png" alt="Company Logo" style={{ height: "48px", width: "auto" }} />
-                            <span className="ms-2 text-white fw-bold">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-none d-md-inline">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-inline d-md-none">Dicel Sec. Comp</span>
                         </a>
                         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
@@ -268,9 +269,9 @@ function CctvCameras() {
                         </button>
                         <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="/" className="nav-item nav-link ">Home</a>
+                                <a href="/" className="nav-item nav-link active text-secondary">Home</a>
                                 <a href="/about" className="nav-item nav-link">About</a>
-                                <a href="/services" className="nav-item active nav-link">Services</a>
+                                <a href="/services" className="nav-item nav-link">Services</a>
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
                                 <a href="/contact" className="nav-item nav-link">Contact</a>
                             </div>
@@ -357,7 +358,7 @@ function CctvCameras() {
 								</FeatureCard>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/installatio-maintenance.jpg" alt="Installation & Maintenance" loading="lazy" />
+										<img src="assets/img/installatio-maintenance.jpeg" alt="Installation & Maintenance" loading="lazy" />
 									</div>
 									<h4>Installation & Maintenance</h4>
 									<p>Site survey, optimal placement, cabling, and proactive service plans.</p>
@@ -452,6 +453,65 @@ function CctvCameras() {
 					</SectionContainer>
 				</PageSection>
 			</ThemeProvider>
+
+			{/* <!-- Footer Start --> */}
+            <div className="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+                <div className="container pt-5 pb-4">
+                    <div className="row g-5">
+                        <div className="col-lg-4 col-md-6">
+                            <a href="#top">
+                                <h1 className="text-white fw-bold d-block">Dicel<span className="text-primary"> Security</span></h1>
+                            </a>
+                            <p className="mt-4 text-light">Since 2017, Dicel Security Company provides licensed guarding, CCTV, access control and alarm solutions to protect people, property and assets across Rwanda.</p>
+                            <div className="d-flex hightech-link">
+                                <a href="#" className="btn-light nav-fill btn btn-square rounded-circle me-2"><i className="fab fa-facebook-f text-primary"></i></a>
+                                <a href="#" className="btn-light nav-fill btn btn-square rounded-circle me-2"><i className="fab fa-twitter text-primary"></i></a>
+                                <a href="#" className="btn-light nav-fill btn btn-square rounded-circle me-2"><i className="fab fa-instagram text-primary"></i></a>
+                                <a href="#" className="btn-light nav-fill btn btn-square rounded-circle me-0"><i className="fab fa-linkedin-in text-primary"></i></a>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-6">
+                            <a href="#" className="h4 text-primary">Quick Links</a>
+                            <div className="mt-4 d-flex flex-column short-link">
+                                <a href="#about" className="mb-2 text-white"><i className="fas fa-angle-right text-primary me-2"></i>About Us</a>
+                                <a href="#services" className="mb-2 text-white"><i className="fas fa-angle-right text-primary me-2"></i>Services</a>
+                                <a href="#contact" className="mb-2 text-white"><i className="fas fa-angle-right text-primary me-2"></i>Contact</a>
+                                <a href="service.html" className="mb-2 text-white"><i className="fas fa-angle-right text-primary me-2"></i>Request Quote</a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6">
+                            <a href="#" className="h4 text-primary">Our Solutions</a>
+                            <div className="mt-4 d-flex flex-column help-link">
+                                <a href="service.html" className="mb-2 text-white"><i className="fas fa-check text-primary me-2"></i>Security Guarding</a>
+                                <a href="service.html" className="mb-2 text-white"><i className="fas fa-check text-primary me-2"></i>CCTV & Monitoring</a>
+                                <a href="service.html" className="mb-2 text-white"><i className="fas fa-check text-primary me-2"></i>Access Control</a>
+                                <a href="service.html" className="mb-2 text-white"><i className="fas fa-check text-primary me-2"></i>Alarm Systems</a>
+                                <a href="service.html" className="mb-2 text-white"><i className="fas fa-check text-primary me-2"></i>Consulting</a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6">
+                            <a href="#" className="h4 text-primary">Contact Us</a>
+                            <div className="text-white mt-4 d-flex flex-column contact-link">
+                                <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
+                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
+                                <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr className="text-light mt-5 mb-4" />
+                    <div className="row">
+                        <div className="col-md-6 text-center text-md-start">
+                            <span className="text-light"><i className="far fa-copyright text-primary me-2"></i>Dicel Security Company. All rights reserved.</span>
+                        </div>
+                        <div className="col-md-6 text-center text-md-end">
+                            <span className="text-light">Developed by <a href="#" className="text-primary text-decoration-none">Maliki Ntwali</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <!-- Footer End --> */}
         </div>
     )
 }

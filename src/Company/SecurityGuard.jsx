@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { motion } from 'framer-motion'
 
-// Local themed styles inspired by the shared pattern
 const themes = {
 	light: {
 		background: '#f8f9fa',
@@ -116,8 +115,7 @@ const FeatureCard = styled(motion.div)`
 		line-height: 1.5;
 	}
 `
-
-// Info content styles for service-first page
+// Info content styles for CCTV service page
 const InfoBlock = styled(motion.div)`
 	color: ${({ theme }) => theme.text};
 	font-size: 1rem;
@@ -131,7 +129,7 @@ const InfoBlock = styled(motion.div)`
 
 	li { margin-bottom: 0.4rem; }
 `
-// Overview highlight styles
+
 const HighlightsGrid = styled(motion.div)`
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -155,7 +153,7 @@ const HighlightCard = styled(motion.div)`
 	.title { font-weight: 600; color: ${({ theme }) => theme.text}; margin-bottom: 4px; }
 	.desc { color: ${({ theme }) => theme.subtleText}; font-size: 0.95rem; }
 `
-// New: services list styles
+
 const ServicesList = styled(motion.div)`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -213,7 +211,6 @@ const ThemeDot = styled.button`
 	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 `
 
-// Motion variants
 const containerVariants = {
 	hidden: { opacity: 0, y: 24 },
 	visible: {
@@ -228,7 +225,7 @@ const itemVariants = {
 	visible: { opacity: 1, y: 0, transition: { duration: 0.45 } }
 }
 
-function AccessControl() {
+function SecurityGuard() {
     return (
         <div>
             {/* <!-- Topbar Start --> */}
@@ -257,8 +254,8 @@ function AccessControl() {
                 </div>
             </div>
             {/* <!-- Topbar End --> */}
-            {/* <!-- Navbar Start --> */}
-            <div id="site-navbar" className="container-fluid bg-primary sticky-top">
+           {/* <!-- Navbar Start --> */}
+		   <div id="site-navbar" className="container-fluid bg-primary sticky-top">
                 <div className="container">
                     <nav className="navbar navbar-dark navbar-expand-lg py-0">
                         <a href="/" className="navbar-brand d-flex align-items-center">
@@ -300,19 +297,12 @@ function AccessControl() {
             {/* <!-- Page Header Start --> */}
             <div className="container-fluid page-header py-5">
                 <div className="container text-center py-5">
-                    <h1 className="display-2 text-white mb-4 animated slideInDown">Access Control</h1>
-                    <nav aria-label="breadcrumb animated slideInDown">
-                        {/* <ol className="breadcrumb justify-content-center mb-0">
-                            <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item"><a href="">Pages</a></li>
-                            <li className="breadcrumb-item" aria-current="page">About</li>
-                        </ol> */}
-                    </nav>
+                    <h1 className="display-2 text-white mb-4 animated slideInDown">Security Guarding</h1>
                 </div>
             </div>
             {/* <!-- Page Header End --> */}
 
-			{/* Enhanced Themed Section */}
+			{/* Themed CCTV Section */}
 			<ThemeProvider theme={themes.light}>
 				<PageSection>
 					<SectionContainer>
@@ -327,120 +317,120 @@ function AccessControl() {
 							viewport={{ once: true, amount: 0.25 }}
 						>
 							<SectionHeader>
-								<motion.h2 variants={itemVariants}>Access Control Solutions</motion.h2>
-								<motion.p variants={itemVariants}>Modern, secure, and scalable systems tailored to your facility.</motion.p>
+								<motion.h2 variants={itemVariants}>Professional Guarding Solutions</motion.h2>
+								<motion.p variants={itemVariants}>Trained, licensed, and technology-enabled guards protecting people and assets.</motion.p>
 							</SectionHeader>
 							<FeatureGrid variants={containerVariants}>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/biometric-entry.jpg" alt="Biometric Entry" loading="lazy" />
+										<img src="assets/img/guard-manned.jpg" alt="Manned Guarding" loading="lazy" />
 									</div>
-									<h4>Biometric Entry</h4>
-									<p>High-assurance fingerprint and face recognition for secure areas.</p>
+									<h4>Manned Guarding</h4>
+									<p>Static posts, lobby security, and access point control with visitor screening.</p>
 								</FeatureCard>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/RFID & Smart Cards.jpg" alt="RFID & Smart Cards" loading="lazy" />
+										<img src="assets/img/guard-patrols.jpg" alt="Patrols" loading="lazy" />
 									</div>
-									<h4>RFID & Smart Cards</h4>
-									<p>Fast, auditable access using contactless credentials and badges.</p>
+									<h4>Patrols</h4>
+									<p>Scheduled and random patrols, checkpoint scanning and incident reporting.</p>
 								</FeatureCard>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/Turnstiles-Gates.jpg" alt="Turnstiles & Gates" loading="lazy" />
+										<img src="assets/img/guard-reception.jpg" alt="Reception Services" loading="lazy" />
 									</div>
-									<h4>Turnstiles & Gates</h4>
-									<p>Physical barriers integrated with your identity systems.</p>
+									<h4>Reception Services</h4>
+									<p>Front-of-house concierge with security awareness and professionalism.</p>
 								</FeatureCard>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/Visitor-Management.webp" alt="Visitor Management" loading="lazy" />
+										<img src="assets/img/guard-event.jpg" alt="Event Security" loading="lazy" />
 									</div>
-									<h4>Visitor Management</h4>
-									<p>Pre-registration, badge printing, and real-time logs for safe entry.</p>
+									<h4>Event Security</h4>
+									<p>Crowd control, bag checks, and VIP escort for safe, smooth events.</p>
 								</FeatureCard>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/Cloud-Mangement.jpg" alt="Cloud Management" loading="lazy" />
+										<img src="assets/img/guard-response.jpg" alt="Rapid Response" loading="lazy" />
 									</div>
-									<h4>Cloud Management</h4>
-									<p>Remote provisioning and monitoring from a unified dashboard.</p>
+									<h4>Rapid Response</h4>
+									<p>Alarm response, incident containment and liaison with authorities.</p>
 								</FeatureCard>
 								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
 									<div className="image-container">
-										<img src="assets/img/Installation&Support.jpg" alt="Installation & Support" loading="lazy" />
+										<img src="assets/img/guard-controlroom.jpg" alt="24/7 Control Room" loading="lazy" />
 									</div>
-									<h4>Installation & Support</h4>
-									<p>End‑to‑end deployment with proactive maintenance and SLAs.</p>
+									<h4>24/7 Control Room</h4>
+									<p>Centralized dispatch, welfare checks, GPS tracking and escalation.</p>
 								</FeatureCard>
 							</FeatureGrid>
 
 							{/* Service Overview */}
 							<SectionHeader style={{ marginTop: '1.5rem' }}>
 								<motion.h2 variants={itemVariants}>Service Overview</motion.h2>
-								<motion.p variants={itemVariants}>We implement secure, user-friendly access control that scales with your facility and compliance needs.</motion.p>
+								<motion.p variants={itemVariants}>Reliable, present, and proactive guarding tailored to your risk profile.</motion.p>
 							</SectionHeader>
 							<InfoBlock variants={containerVariants}>
 								<motion.p variants={itemVariants}>
-									From single doors to multi-site campuses, Dicel designs and deploys policy-driven access control that reduces risk while keeping operations smooth. We support biometrics, smart cards, mobile credentials and PINs, unified under centralized management.
+									Our guarding programs combine trained personnel, standard operating procedures and technology to deter threats and respond fast. We align post orders with your operations to maintain safety without friction.
 								</motion.p>
 								<HighlightsGrid variants={containerVariants}>
 									<HighlightCard variants={itemVariants}>
-										<div className="title">Centralized Control</div>
-										<div className="desc">Role/time-based rules, zones, holidays, and instant lock/unlock.</div>
+										<div className="title">Licensed Staff</div>
+										<div className="desc">Background-checked, uniformed and site-inducted guards.</div>
 									</HighlightCard>
 									<HighlightCard variants={itemVariants}>
-										<div className="title">Strong Identity</div>
-										<div className="desc">Biometrics, RFID, mobile keys with anti-tailgate/anti-passback.</div>
+										<div className="title">Tech-Enabled</div>
+										<div className="desc">Patrol tags, incident apps, GPS and live dashboards.</div>
 									</HighlightCard>
 									<HighlightCard variants={itemVariants}>
-										<div className="title">Audit & Compliance</div>
-										<div className="desc">Real-time events, reports, alarms and visitor traceability.</div>
+										<div className="title">Clear SOPs</div>
+										<div className="desc">Shift handovers, escalation paths and emergency drills.</div>
 									</HighlightCard>
 									<HighlightCard variants={itemVariants}>
-										<div className="title">Cloud or On‑prem</div>
-										<div className="desc">Choose your deployment with secure remote administration.</div>
+										<div className="title">Integrated</div>
+										<div className="desc">Aligned with your CCTV, access control and alarms.</div>
 									</HighlightCard>
 								</HighlightsGrid>
 							</InfoBlock>
 
-							{/* New: What We Provide */}
+							{/* What We Provide */}
 							<SectionHeader style={{ marginTop: '2rem' }}>
 								<motion.h2 variants={itemVariants}>What We Provide</motion.h2>
-								<motion.p variants={itemVariants}>Complete access control delivery from survey to support.</motion.p>
+								<motion.p variants={itemVariants}>Guarding-specific deliverables for dependable protection.</motion.p>
 							</SectionHeader>
 							<ServicesList variants={containerVariants}>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">On‑site security survey and door-by-door requirements capture</div>
+									<div className="text">Site risk assessment and post order development</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">System architecture, controller sizing and wiring schematics</div>
+									<div className="text">Guard deployment plan, shifts, welfare and supervision</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Reader/lock hardware selection and bill of materials (BoM)</div>
+									<div className="text">Patrol routes, checkpoints and incident reporting setup</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Panel installation, door hardware fitting and cable management</div>
+									<div className="text">Emergency response procedures and escalation protocols</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Platform setup, roles, schedules, zones and anti-passback rules</div>
+									<div className="text">Integration with CCTV, access control and alarms</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Integration with CCTV, alarms, fire panel and HR/attendance</div>
+									<div className="text">Client reporting, KPIs, audits and monthly reviews</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">User/visitor enrollment, credential issuance and operator training</div>
+									<div className="text">Training, induction and guard performance management</div>
 								</ServiceItem>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Acceptance testing, documentation and 24/7 support SLAs</div>
+									<div className="text">24/7 control room support and rapid response</div>
 								</ServiceItem>
 							</ServicesList>
 
@@ -522,12 +512,10 @@ function AccessControl() {
                 </div>
             </div>
             {/* <!-- Footer End --> */}
-
-            {/* <!-- Back to Top --> */}
-            <a href="/contact" className="btn btn-secondary btn-square rounded-circle back-to-top"><i
-                className="fa fa-arrow-up text-white"></i></a>
         </div>
     )
 }
 
-export default AccessControl
+export default SecurityGuard
+
+

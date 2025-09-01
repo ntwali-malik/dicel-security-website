@@ -35,7 +35,8 @@ function Contact() {
                     <nav className="navbar navbar-dark navbar-expand-lg py-0">
                         <a href="/" className="navbar-brand d-flex align-items-center">
                             <img src="assets/img/logo.png" alt="Company Logo" style={{ height: "48px", width: "auto" }} />
-                            <span className="ms-2 text-white fw-bold">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-none d-md-inline">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-inline d-md-none">Dicel Sec. Comp</span>
                         </a>
                         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
@@ -43,11 +44,11 @@ function Contact() {
                         </button>
                         <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="/" className="nav-item nav-link ">Home</a>
+                                <a href="/" className="nav-item nav-link active text-secondary">Home</a>
                                 <a href="/about" className="nav-item nav-link">About</a>
                                 <a href="/services" className="nav-item nav-link">Services</a>
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
-                                <a href="/contact" className="nav-item active nav-link">Contact</a>
+                                <a href="/contact" className="nav-item nav-link">Contact</a>
                             </div>
                         </div>
                         <div className="d-none d-xl-flex flex-shirink-0">

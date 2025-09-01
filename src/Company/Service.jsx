@@ -1,10 +1,10 @@
 import React from 'react'
 
 function Service() {
-  return (
-    <div>
-        {/* <!-- Topbar Start --> */}
-        <div className="container-fluid bg-dark py-2 d-none d-md-flex">
+    return (
+        <div>
+            {/* <!-- Topbar Start --> */}
+            <div className="container-fluid bg-dark py-2 d-none d-md-flex">
                 <div className="container">
                     <div className="d-flex justify-content-between topbar">
                         <div className="top-info">
@@ -35,7 +35,8 @@ function Service() {
                     <nav className="navbar navbar-dark navbar-expand-lg py-0">
                         <a href="/" className="navbar-brand d-flex align-items-center">
                             <img src="assets/img/logo.png" alt="Company Logo" style={{ height: "48px", width: "auto" }} />
-                            <span className="ms-2 text-white fw-bold">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-none d-md-inline">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-inline d-md-none">Dicel Sec. Comp</span>
                         </a>
                         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
@@ -43,9 +44,9 @@ function Service() {
                         </button>
                         <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="/" className="nav-item nav-link">Home</a>
+                                <a href="/" className="nav-item nav-link active text-secondary">Home</a>
                                 <a href="/about" className="nav-item nav-link">About</a>
-                                <a href="/services" className="nav-item active nav-link">Services</a>
+                                <a href="/services" className="nav-item nav-link">Services</a>
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
                                 <a href="/contact" className="nav-item nav-link">Contact</a>
                             </div>
@@ -99,7 +100,7 @@ function Service() {
                                         <img src="assets/img/1.jpeg" alt="Security Guard" className="service-thumb img-fluid rounded mb-4 img-animate" />
                                         <h4 className="mb-3">Security Guard</h4>
                                         <p className="mb-4">Patrols and inspects property against fire, theft, vandalism, terrorism, and illegal activity.</p>
-                                        <a href="/services/security-guard" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <a href="/security-guard" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +124,7 @@ function Service() {
                                         <img src="assets/img/metaldetectors.png" alt="Metal Alarm Detector" className="service-thumb img-fluid rounded mb-4 img-animate" />
                                         <h4 className="mb-3">Metal Alarm Detector</h4>
                                         <p className="mb-4">Designed to detect metal objects such as guns, knives, and tools for safe entry screening.</p>
-                                        <a href="/services/metal-detector" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <a href="/metal-detector" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +136,7 @@ function Service() {
                                         <img src="assets/img/alarms-system.png" alt="Alarm Systems" className="service-thumb img-fluid rounded mb-4 img-animate" />
                                         <h4 className="mb-3">Alarm Systems</h4>
                                         <p className="mb-4">Systems that detect intrusion or unauthorized entry into buildings, homes, or facilities.</p>
-                                        <a href="/services/alarm-systems" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                    <a href="/alarm-systems" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +160,7 @@ function Service() {
                                         <img src="assets/img/consulting-Service.jpg" alt="Consulting Services" className="service-thumb img-fluid rounded mb-4 img-animate" />
                                         <h4 className="mb-3">Consulting Services</h4>
                                         <p className="mb-4">Expert guidance and strategic advice for informed decision‑making and risk reduction.</p>
-                                        <a href="/services/consulting" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <a href="/consulting" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -323,8 +324,8 @@ function Service() {
             {/* <!-- Back to Top --> */}
             <a href="/services" className="btn btn-secondary btn-square rounded-circle back-to-top"><i
                 className="fa fa-arrow-up text-white"></i></a>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Service

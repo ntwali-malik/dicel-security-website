@@ -35,7 +35,8 @@ function About() {
                     <nav className="navbar navbar-dark navbar-expand-lg py-0">
                         <a href="/" className="navbar-brand d-flex align-items-center">
                             <img src="assets/img/logo.png" alt="Company Logo" style={{ height: "48px", width: "auto" }} />
-                            <span className="ms-2 text-white fw-bold">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-none d-md-inline">Dicel Security Company</span>
+                            <span className="ms-2 text-white fw-bold d-inline d-md-none">Dicel Sec. Comp</span>
                         </a>
                         <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
@@ -43,8 +44,8 @@ function About() {
                         </button>
                         <div className="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div className="navbar-nav ms-auto mx-xl-auto p-0">
-                                <a href="/" className="nav-item nav-link ">Home</a>
-                                <a href="/about" className="nav-item active nav-link">About</a>
+                                <a href="/" className="nav-item nav-link active text-secondary">Home</a>
+                                <a href="/about" className="nav-item nav-link">About</a>
                                 <a href="/services" className="nav-item nav-link">Services</a>
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
                                 <a href="/contact" className="nav-item nav-link">Contact</a>
@@ -136,84 +137,133 @@ function About() {
                             <p>One driving force behind Dicel Security Company Ltd philosophy is to provide security to organizations in the region with leading innovative security solutions at affordable cost for their competitiveness.</p>
                             <h5 className="mt-3">Vision</h5>
                             <p className="mb-4">The vision of the Dicel Security Company Ltd is to grow and become a leading security company at national and International level by extending its services in all areas of the Country and abroad.</p>
-                            <a href="#about" className="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a>
                         </div>
                     </div>
                 </div>
             </div>
             {/* <!-- About End --> */}
-            {/* <!-- Team Start --> */}
+            {/* <!-- Clients Start --> */}
             <div className="container-fluid py-5 mb-5 team">
                 <div className="container">
                     <div className="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style={{ maxWidth: "600px" }}>
-                        <h5 className="text-primary">Our Team</h5>
-                        <h1>Meet our expert Team</h1>
+                        <h5 className="text-primary">Our Clients</h5>
+                        <h1>Trusted by Leading Organizations</h1>
+                        <p className="text-muted">We've provided security solutions to businesses across Rwanda</p>
                     </div>
-                    <div className="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
-                        <div className="team-card team-item bg-white rounded shadow-sm">
-                            <div className="team-photo position-relative">
-                                <img src="assets/img/team-1.jpg" className="img-fluid w-100" alt="Team Member" loading="lazy" />
-                                <div className="team-overlay d-flex align-items-center justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-linkedin-in"></i></a>
-                                </div>
+                    <div className="client-marquee-container" style={{ overflow: "hidden", position: "relative" }}>
+                        <div className="client-marquee" style={{ 
+                            display: "flex", 
+                            animation: "scroll 30s linear infinite",
+                            width: "max-content"
+                        }}>
+                            {/* First set of clients */}
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/a.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                            <div className="text-center p-3">
-                                <h4 className="mb-1">Full Name</h4>
-                                <p className="m-0 text-secondary">Designation</p>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/b.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                        </div>
-                        <div className="team-card team-item bg-white rounded shadow-sm">
-                            <div className="team-photo position-relative">
-                                <img src="assets/img/team-2.jpg" className="img-fluid w-100" alt="Team Member" loading="lazy" />
-                                <div className="team-overlay d-flex align-items-center justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-linkedin-in"></i></a>
-                                </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/c.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                            <div className="text-center p-3">
-                                <h4 className="mb-1">Full Name</h4>
-                                <p className="m-0 text-secondary">Designation</p>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/d.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                        </div>
-                        <div className="team-card team-item bg-white rounded shadow-sm">
-                            <div className="team-photo position-relative">
-                                <img src="assets/img/team-3.jpg" className="img-fluid w-100" alt="Team Member" loading="lazy" />
-                                <div className="team-overlay d-flex align-items-center justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-linkedin-in"></i></a>
-                                </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/e.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                            <div className="text-center p-3">
-                                <h4 className="mb-1">Full Name</h4>
-                                <p className="m-0 text-secondary">Designation</p>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/f.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                        </div>
-                        <div className="team-card team-item bg-white rounded shadow-sm">
-                            <div className="team-photo position-relative">
-                                <img src="assets/img/team-4.jpg" className="img-fluid w-100" alt="Team Member" loading="lazy" />
-                                <div className="team-overlay d-flex align-items-center justify-content-center">
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-facebook-f"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-twitter"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-instagram"></i></a>
-                                    <a className="btn btn-square btn-primary text-white rounded-circle m-1" href="#"><i className="fab fa-linkedin-in"></i></a>
-                                </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/g.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
-                            <div className="text-center p-3">
-                                <h4 className="mb-1">Full Name</h4>
-                                <p className="m-0 text-secondary">Designation</p>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/h.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/j.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/k.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/l.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/z.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            {/* Duplicate set for seamless loop */}
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/a.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/b.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/c.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/d.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/e.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/f.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/g.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/h.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/j.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/k.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/l.png" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
+                            </div>
+                            <div className="client-item bg-white rounded shadow-sm p-3 mx-3 d-flex align-items-center justify-content-center" style={{ minWidth: "150px", height: "100px" }}>
+                                <img src="assets/img/clients/z.jpg" className="img-fluid" alt="Client Logo" style={{ maxHeight: "60px", maxWidth: "100%" }} />
                             </div>
                         </div>
                     </div>
+                    <style>{`
+                        @keyframes scroll {
+                            0% {
+                                transform: translateX(0);
+                            }
+                            100% {
+                                transform: translateX(-50%);
+                            }
+                        }
+                        .client-marquee:hover {
+                            animation-play-state: paused;
+                        }
+                        .client-item { 
+                            min-width: 180px; 
+                            height: 120px; 
+                            background: #ffffff; 
+                            border: 1px solid rgba(0,0,0,0.06);
+                            border-radius: 12px;
+                        }
+                        .client-item img {
+                            height: 70px;
+                            width: auto;
+                            object-fit: contain;
+                            image-rendering: -webkit-optimize-contrast;
+                            image-rendering: crisp-edges;
+                            -ms-interpolation-mode: bicubic;
+                            display: block;
+                        }
+                    `}</style>
                 </div>
             </div>
-            {/* <!-- Team End --> */}
+            {/* <!-- Clients End --> */}
 
             {/* <!-- Footer Start --> */}
             <div className="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
