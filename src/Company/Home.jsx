@@ -4,7 +4,7 @@ function Home() {
     return (
         <div>
             {/* <!-- Topbar Start --> */}
-            <div className="container-fluid bg-dark py-2 d-none d-md-flex">
+            <div className="container-fluid bg-dark py-2">
                 <div className="container">
                     <div className="d-flex justify-content-between topbar">
                         <div className="top-info">
@@ -50,8 +50,15 @@ function Home() {
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
                                 <a href="/contact" className="nav-item nav-link">Contact</a>
                             </div>
+                            {/* Small-screen contact actions */}
+                            <div className="d-lg-none border-top mt-3 pt-3">
+                                <div className="d-flex align-items-center justify-content-between">
+                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>+250 788 313 547</a>
+                                    <a href="mailto:info@dicel.co.rw" className="text-white text-decoration-none ms-3"><i className="fas fa-envelope me-2"></i>info@dicel.co.rw</a>
+                                </div>
+                            </div>
                         </div>
-                        <div className="d-none d-xl-flex flex-shirink-0">
+                        <div className="d-none d-lg-flex flex-shirink-0 align-items-center ms-lg-3">
                             <div id="phone-tada" className="d-flex align-items-center justify-content-center me-4">
                                 <a href="#" className="position-relative animated tada infinite">
                                     <i className="fa fa-phone-alt text-white fa-2x"></i>
@@ -60,9 +67,9 @@ function Home() {
                                     </div>
                                 </a>
                             </div>
-                            <div className="d-flex flex-column pe-4 border-end">
-                                <span className="text-white-50">Have any questions?</span>
-                                <span className="text-secondary">Call: +250 788 313 547</span>
+                            <div className="d-flex flex-column pe-4 gap-1">
+                                <span className="text-white">Have any questions?</span>
+                                <span className="text-white">Call: 3024</span>
                             </div>
                         </div>
                     </nav>
@@ -278,10 +285,10 @@ function Home() {
                             <div className="services-item bg-light h-100">
                                 <div className="p-4 text-center services-content">
                                     <div className="services-content-icon">
-                                        <img src="assets/img/1.jpeg" alt="Security Guard" className="service-thumb img-fluid rounded mb-4 img-animate" />
-                                        <h4 className="mb-3">Security Guard</h4>
-                                        <p className="mb-4">Patrols and inspects property against fire, theft, vandalism, terrorism, and illegal activity.</p>
-                                        <a href="service.html" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <img src="assets/img/1.jpeg" alt="Guarding Services" className="service-thumb img-fluid rounded mb-4 img-animate" loading="lazy" decoding="async" />
+                                        <h4 className="mb-3">Guarding Services</h4>
+                                        <p className="mb-4">Residential (Homes & Estates), Commercial & Office Security, and Event Security Management.</p>
+                                        <a href="/guarding-services" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -290,10 +297,10 @@ function Home() {
                             <div className="services-item bg-light h-100">
                                 <div className="p-4 text-center services-content">
                                     <div className="services-content-icon">
-                                        <img src="assets/img/camera.png" alt="CCTV Cameras" className="service-thumb img-fluid rounded mb-4 img-animate" />
-                                        <h4 className="mb-3">CCTV Cameras</h4>
-                                        <p className="mb-4">Continuous image capture transmitted to recording devices and display monitors for real-time viewing.</p>
-                                        <a href="service.html" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <img src="assets/img/admin.jpg" alt="Stewardship Services" className="service-thumb img-fluid rounded mb-4 img-animate" loading="lazy" decoding="async" />
+                                        <h4 className="mb-3">Stewardship Services</h4>
+                                        <p className="mb-4">Professional stewards for corporate, social, and public events.</p>
+                                        <a href="/stewardship-services" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -302,10 +309,10 @@ function Home() {
                             <div className="services-item bg-light h-100">
                                 <div className="p-4 text-center services-content">
                                     <div className="services-content-icon">
-                                        <img src="assets/img/metaldetectors.png" alt="Metal Alarm Detector" className="service-thumb img-fluid rounded mb-4 img-animate" />
-                                        <h4 className="mb-3">Metal Alarm Detector</h4>
-                                        <p className="mb-4">Designed to detect metal objects such as guns, knives, and tools for safe entry screening.</p>
-                                        <a href="service.html" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <img src="assets/img/alarms-system.png" alt="Digital Security Solutions" className="service-thumb img-fluid rounded mb-4 img-animate" loading="lazy" decoding="async" />
+                                        <h4 className="mb-3">Digital Security Solutions</h4>
+                                        <p className="mb-4">Alarm Systems & Access Control, IP Surveillance & CCTV Installation.</p>
+                                        <a href="/digital-security-solutions" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -314,10 +321,10 @@ function Home() {
                             <div className="services-item bg-light h-100">
                                 <div className="p-4 text-center services-content">
                                     <div className="services-content-icon">
-                                        <img src="assets/img/alarms-system.png" alt="Alarm Systems" className="service-thumb img-fluid rounded mb-4 img-animate" />
-                                        <h4 className="mb-3">Alarm Systems</h4>
-                                        <p className="mb-4">Systems that detect intrusion or unauthorized entry into buildings, homes, or facilities.</p>
-                                        <a href="service.html" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <img src="assets/img/AlarmSystem/FireAlarmSystems.png" alt="Fire Detection & Firefighting" className="service-thumb img-fluid rounded mb-4 img-animate" loading="lazy" decoding="async" />
+                                        <h4 className="mb-3">Fire Detection & Firefighting</h4>
+                                        <p className="mb-4">Fire detection systems and firefighting equipment supply and setup.</p>
+                                        <a href="/fire-detection-firefighting" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -326,22 +333,10 @@ function Home() {
                             <div className="services-item bg-light h-100">
                                 <div className="p-4 text-center services-content">
                                     <div className="services-content-icon">
-                                        <img src="assets/img/access_controls.jpg" alt="Access Control" className="service-thumb img-fluid rounded mb-4 img-animate" />
-                                        <h4 className="mb-3">Access Control</h4>
-                                        <p className="mb-4">Regulates who can view or use resources — includes biometric access and time & attendance.</p>
-                                        <a href="service.html" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                            <div className="services-item bg-light h-100">
-                                <div className="p-4 text-center services-content">
-                                    <div className="services-content-icon">
-                                        <img src="assets/img/consulting-Service.jpg" alt="Consulting Services" className="service-thumb img-fluid rounded mb-4 img-animate" />
-                                        <h4 className="mb-3">Consulting Services</h4>
-                                        <p className="mb-4">Expert guidance and strategic advice for informed decision‑making and risk reduction.</p>
-                                        <a href="service.html" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                        <img src="assets/img/consulting-Service.jpg" alt="Security Consulting & Training" className="service-thumb img-fluid rounded mb-4 img-animate" loading="lazy" decoding="async" />
+                                        <h4 className="mb-3">Security Consulting & Training</h4>
+                                        <p className="mb-4">Security consulting, fire fighting and fire extinguishing drills.</p>
+                                        <a href="/security-consulting-training" className="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                                     </div>
                                 </div>
                             </div>

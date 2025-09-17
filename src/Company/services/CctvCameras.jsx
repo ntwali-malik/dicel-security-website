@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 
 const themes = {
 	light: {
@@ -226,6 +226,25 @@ const itemVariants = {
 }
 
 function CctvCameras() {
+    const prefersReducedMotion = useReducedMotion()
+    const [isMobile, setIsMobile] = React.useState(false)
+
+    React.useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 576px)')
+        const update = () => setIsMobile(mediaQuery.matches)
+        update()
+        mediaQuery.addEventListener?.('change', update)
+        return () => mediaQuery.removeEventListener?.('change', update)
+    }, [])
+
+    const motionEnabled = !(prefersReducedMotion || isMobile)
+
+    const sectionCardMotionProps = motionEnabled
+        ? { variants: containerVariants, initial: 'hidden', whileInView: 'visible', viewport: { once: true, amount: 0.25 } }
+        : {}
+
+    const containerMotionProps = motionEnabled ? { variants: containerVariants } : {}
+
     return (
         <div>
             {/* <!-- Topbar Start --> */}
@@ -311,54 +330,51 @@ function CctvCameras() {
 							<ThemeDot style={{ background: themes.dark.primary }} aria-label="Dark theme" />
 						</ThemeSelector>
 						<SectionCard
-							variants={containerVariants}
-							initial="hidden"
-							whileInView="visible"
-							viewport={{ once: true, amount: 0.25 }}
+							{...sectionCardMotionProps}
 						>
 							<SectionHeader>
 								<motion.h2 variants={itemVariants}>CCTV & Surveillance</motion.h2>
 								<motion.p variants={itemVariants}>Reliable visibility, evidence-grade footage, and proactive deterrence.</motion.p>
 							</SectionHeader>
-							<FeatureGrid variants={containerVariants}>
-								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
+							<FeatureGrid {...containerMotionProps}>
+								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
 									<div className="image-container">
-										<img src="assets/img/hd-ip-cameras.png" alt="HD IP Cameras" loading="lazy" />
+										<img src="assets/img/hd-ip-cameras.png" alt="HD IP Cameras" loading="lazy" decoding="async" />
 									</div>
 									<h4>HD IP Cameras</h4>
 									<p>Crystal-clear 1080p/4K video with night vision and wide dynamic range.</p>
 								</FeatureCard>
-								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
+								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
 									<div className="image-container">
-										<img src="assets/img/monitoring.jpg" alt="24/7 Monitoring" loading="lazy" />
+										<img src="assets/img/monitoring.jpg" alt="24/7 Monitoring" loading="lazy" decoding="async" />
 									</div>
 									<h4>24/7 Monitoring</h4>
 									<p>Always-on recording and alerting to keep your premises protected day and night.</p>
 								</FeatureCard>
-								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
+								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
 									<div className="image-container">
-										<img src="assets/img/remote-viewing.jpg" alt="Remote Viewing" loading="lazy" />
+										<img src="assets/img/remote-viewing.jpg" alt="Remote Viewing" loading="lazy" decoding="async" />
 									</div>
 									<h4>Remote Viewing</h4>
 									<p>Secure mobile and web access from anywhere with role-based permissions.</p>
 								</FeatureCard>
-								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
+								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
 									<div className="image-container">
-										<img src="assets/img/motion-Detection.webp" alt="Motion & Intrusion Alerts" loading="lazy" />
+										<img src="assets/img/Motion-Detection.webp" alt="Motion & Intrusion Alerts" loading="lazy" decoding="async" />
 									</div>
 									<h4>Motion & Intrusion Alerts</h4>
 									<p>Smart detection triggers push notifications, sirens, and lights.</p>
 								</FeatureCard>
-								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
+								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
 									<div className="image-container">
-										<img src="assets/img/analytics.jpg" alt="Video Analytics" loading="lazy" />
+										<img src="assets/img/analytics.jpg" alt="Video Analytics" loading="lazy" decoding="async" />
 									</div>
 									<h4>Video Analytics</h4>
 									<p>AI-based people counting, loitering alerts, and object detection.</p>
 								</FeatureCard>
-								<FeatureCard variants={itemVariants} whileHover={{ scale: 1.02 }}>
+								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
 									<div className="image-container">
-										<img src="assets/img/installatio-maintenance.jpeg" alt="Installation & Maintenance" loading="lazy" />
+										<img src="assets/img/installatio-maintenance.jpeg" alt="Installation & Maintenance" loading="lazy" decoding="async" />
 									</div>
 									<h4>Installation & Maintenance</h4>
 									<p>Site survey, optimal placement, cabling, and proactive service plans.</p>
@@ -370,7 +386,7 @@ function CctvCameras() {
 								<motion.h2 variants={itemVariants}>Service Overview</motion.h2>
 								<motion.p variants={itemVariants}>End-to-end CCTV solutions delivering clarity, coverage and control.</motion.p>
 							</SectionHeader>
-							<InfoBlock variants={containerVariants}>
+							<InfoBlock {...containerMotionProps}>
 								<motion.p variants={itemVariants}>
 									We design and deploy surveillance systems that deter incidents and provide reliable evidence when needed. Our designs balance camera types, placement, storage and network to achieve your security objectives.
 								</motion.p>
@@ -399,7 +415,7 @@ function CctvCameras() {
 								<motion.h2 variants={itemVariants}>What We Provide</motion.h2>
 								<motion.p variants={itemVariants}>CCTV-specific deliverables from survey to support.</motion.p>
 							</SectionHeader>
-							<ServicesList variants={containerVariants}>
+							<ServicesList {...containerMotionProps}>
 								<ServiceItem variants={itemVariants}>
 									<div className="badge"><i className="fas fa-check"></i></div>
 									<div className="text">Site survey, risk assessment and camera/coverage plan</div>
@@ -435,20 +451,24 @@ function CctvCameras() {
 							</ServicesList>
 
 							{/* Floating decorative accents */}
-							<motion.div
-								aria-hidden
-								style={{ position: 'absolute', top: -20, right: -20, width: 80, height: 80, borderRadius: 16, background: 'rgba(9,132,227,0.15)', zIndex: 1 }}
-								initial={{ y: -6, opacity: 0.6 }}
-								animate={{ y: 6, opacity: 0.9 }}
-								transition={{ repeat: Infinity, repeatType: 'reverse', duration: 3 }}
-							/>
-							<motion.div
-								aria-hidden
-								style={{ position: 'absolute', bottom: -24, left: -24, width: 100, height: 100, borderRadius: '50%', background: 'rgba(116,185,255,0.18)', zIndex: 1 }}
-								initial={{ y: 0, opacity: 0.5 }}
-								animate={{ y: -10, opacity: 0.8 }}
-								transition={{ repeat: Infinity, repeatType: 'mirror', duration: 4 }}
-							/>
+							{motionEnabled && (
+								<>
+									<motion.div
+										aria-hidden
+										style={{ position: 'absolute', top: -20, right: -20, width: 80, height: 80, borderRadius: 16, background: 'rgba(9,132,227,0.15)', zIndex: 1 }}
+										initial={{ y: -6, opacity: 0.6 }}
+										animate={{ y: 6, opacity: 0.9 }}
+										transition={{ repeat: Infinity, repeatType: 'reverse', duration: 3 }}
+									/>
+									<motion.div
+										aria-hidden
+										style={{ position: 'absolute', bottom: -24, left: -24, width: 100, height: 100, borderRadius: '50%', background: 'rgba(116,185,255,0.18)', zIndex: 1 }}
+										initial={{ y: 0, opacity: 0.5 }}
+										animate={{ y: -10, opacity: 0.8 }}
+										transition={{ repeat: Infinity, repeatType: 'mirror', duration: 4 }}
+									/>
+								</>
+							)}
 						</SectionCard>
 					</SectionContainer>
 				</PageSection>

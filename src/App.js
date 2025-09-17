@@ -8,6 +8,7 @@ import CctvCameras from './Company/services/CctvCameras';
 import MetalDetector from './Company/services/MetalDetector';
 import AlarmSystems from './Company/services/AlarmSystems';
 import ConsultingServices from './Company/services/ConsultingServices';
+import GuardingServices from './Company/services/GuardingServices';
 import AccessControl from './Company/AccessControl';
 import SecurityGuard from './Company/SecurityGuard';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/alarm-systems" element={<AlarmSystems />} />
         <Route path="/access-control" element={<AccessControl />} />
         <Route path="/consulting" element={<ConsultingServices />} />
+        <Route path="/guarding-services" element={<GuardingServices />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

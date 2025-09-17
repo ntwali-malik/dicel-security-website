@@ -346,7 +346,7 @@ function AlarmSystems() {
                                 <a href="/services" className="nav-item active nav-link">Services</a>
                                 <a href="/gallery" className="nav-item nav-link">Gallery</a>
                                 <a href="/contact" className="nav-item nav-link">Contact</a>
-                            </div>
+                            </div> 
                         </div>
                         <div className="d-none d-xl-flex flex-shirink-0">
                             <div id="phone-tada" className="d-flex align-items-center justify-content-center me-4">

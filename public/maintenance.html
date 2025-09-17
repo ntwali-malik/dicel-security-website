@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dicel Security | Maintenance</title>
+    <meta name="description" content="Dicel Security Company – Website maintenance notice." />
+    <link rel="icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1216;
+            --card: #151a21;
+            --primary: #0984e3;
+            --text: #f1f2f6;
+            --muted: #b2bec3;
+        }
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 800px at 80% -10%, #1e2a38 0%, rgba(30,42,56,0) 60%),
+                        radial-gradient(900px 600px at -10% 110%, #14212d 0%, rgba(20,33,45,0) 55%),
+                        var(--bg);
+            display: grid;
+            place-items: center;
+        }
+        .wrap {
+            width: 100%;
+            max-width: 980px;
+            padding: 24px;
+        }
+        .card {
+            position: relative;
+            background: color-mix(in srgb, var(--card) 94%, #000 6%);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+            overflow: hidden;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand img { height: 48px; width: auto; display: block; }
+        .brand-name { font-weight: 700; letter-spacing: 0.2px; }
+        .badge {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 0.3px;
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), #74b9ff);
+            padding: 6px 10px;
+            border-radius: 999px;
+            margin-top: 12px;
+        }
+        .content { margin-top: 18px; }
+        h1 { margin: 0 0 8px; font-size: 32px; line-height: 1.2; }
+        p.lead { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+
+        .panel {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .panel .left { min-width: 0; }
+        .panel .right {
+            background: rgba(9,132,227,0.08);
+            border: 1px solid rgba(9,132,227,0.2);
+            border-radius: 16px;
+            padding: 18px;
+        }
+        .callouts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 16px; }
+        .callout { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 14px; }
+        .callout .title { font-weight: 600; margin-bottom: 6px; }
+        .callout .desc { color: var(--muted); font-size: 14px; }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 16px;
+            border-radius: 10px; border: 1px solid transparent;
+            color: #fff; text-decoration: none; font-weight: 600;
+            background: linear-gradient(135deg, var(--primary), #3aa0ff);
+            box-shadow: 0 6px 18px rgba(9,132,227,0.35);
+        }
+        .btn.secondary {
+            background: transparent; border-color: rgba(255,255,255,0.16);
+            color: var(--text);
+        }
+        .meta { margin-top: 16px; color: var(--muted); font-size: 13px; }
+
+        .accent-a,
+        .accent-b {
+            position: absolute; z-index: 0; pointer-events: none;
+            filter: blur(28px); opacity: 0.6;
+        }
+        .accent-a { top: -30px; right: -30px; width: 160px; height: 160px; background: rgba(9,132,227,0.25); border-radius: 24px; }
+        .accent-b { bottom: -40px; left: -40px; width: 220px; height: 220px; background: rgba(116,185,255,0.22); border-radius: 50%; }
+
+        .foot { text-align: center; margin-top: 18px; color: var(--muted); font-size: 13px; }
+        .foot a { color: #9fd0ff; text-decoration: none; }
+
+        @media (max-width: 992px) {
+            .panel { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 576px) {
+            .wrap { padding: 16px; }
+            .card { padding: 20px; border-radius: 16px; }
+            h1 { font-size: 26px; }
+            .callouts { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap" role="main">
+        <section class="card" aria-labelledby="maintenance-title">
+            <div class="accent-a" aria-hidden></div>
+            <div class="accent-b" aria-hidden></div>
+
+            <div class="brand">
+                <img src="assets/img/logo.png" alt="Dicel Security logo" />
+                <div class="brand-name">Dicel Security Company</div>
+            </div>
+            <span class="badge" aria-live="polite">Scheduled Maintenance</span>
+
+            <div class="panel">
+                <div class="left">
+                    <div class="content">
+                        <h1 id="maintenance-title">Our site is currently down for maintenance</h1>
+                        <p class="lead">We’re upgrading our systems to serve you better. Thank you for your patience while we complete these improvements.</p>
+                        <div class="callouts">
+                            <div class="callout">
+                                <div class="title">Estimated window</div>
+                                <div class="desc" id="eta-text">Today, 2–4 hours</div>
+                            </div>
+                            <div class="callout">
+                                <div class="title">All services secured</div>
+                                <div class="desc">Guarding operations, monitoring and support remain active.</div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <a class="btn" href="tel:+250788313547" aria-label="Call Dicel Security">
+                                <span>Call Us</span>
+                            </a>
+                            <a class="btn secondary" href="mailto:info@dicel.co.rw" aria-label="Email Dicel Security">
+                                <span>info@dicel.co.rw</span>
+                            </a>
+                        </div>
+                        <div class="meta">HQ: KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</div>
+                    </div>
+                </div>
+                <div class="right" aria-label="Status">
+                    <div style="font-weight:600; margin-bottom:8px;">Status</div>
+                    <div style="color:var(--muted); font-size:14px; line-height:1.6;">
+                        Website maintenance is in progress. You can still reach our team 24/7 for security support and inquiries.
+                    </div>
+                    <div style="margin-top:16px; display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                        <a class="btn" style="justify-content:center;" href="/" aria-label="Return to homepage">Home</a>
+                        <a class="btn secondary" style="justify-content:center;" href="/contact" aria-label="Open contact page">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foot">© <span id="year"></span> Dicel Security Company. All rights reserved.</div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+
