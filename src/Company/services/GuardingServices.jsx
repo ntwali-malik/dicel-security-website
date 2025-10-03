@@ -1,252 +1,9 @@
 import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import { motion, useReducedMotion } from 'framer-motion'
-
-const themes = {
-	light: {
-		background: '#f8f9fa',
-		card: '#ffffff',
-		primary: '#0984e3',
-		text: '#2d3436',
-		subtleText: '#636e72'
-	},
-	dark: {
-		background: '#0f1216',
-		card: '#151a21',
-		primary: '#74b9ff',
-		text: '#f1f2f6',
-		subtleText: '#b2bec3'
-	}
-}
-
-const PageSection = styled.div`
-	min-height: 100%;
-	background: ${({ theme }) => theme.background};
-	padding: 3rem 0;
-`
-
-const SectionContainer = styled.div`
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 0 20px;
-`
-
-const SectionCard = styled(motion.div)`
-	background: ${({ theme }) => theme.card};
-	border-radius: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-	padding: 2rem;
-	margin-top: -60px;
-	position: relative;
-	z-index: 2;
-`
-
-const SectionHeader = styled.div`
-	text-align: center;
-	margin-bottom: 2rem;
-
-	h2 {
-		color: ${({ theme }) => theme.text};
-		font-weight: 700;
-		margin-bottom: 0.5rem;
-	}
-
-	p {
-		color: ${({ theme }) => theme.subtleText};
-	}
-`
-
-const FeatureGrid = styled(motion.div)`
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 1.25rem;
-
-	@media (max-width: 992px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: 576px) {
-		grid-template-columns: 1fr;
-	}
-`
-
-const FeatureCard = styled(motion.div)`
-	background: ${({ theme }) => theme.background};
-	border: 1px solid rgba(0,0,0,0.06);
-	border-radius: 16px;
-	padding: 1.25rem;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-	&:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-	}
-
-	.image-container {
-		width: 100%;
-		height: 160px;
-		border-radius: 12px;
-		overflow: hidden;
-		margin-bottom: 0.9rem;
-		background: #e9edf3;
-		border: 1px solid rgba(0,0,0,0.06);
-	}
-
-	.image-container img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: transform 0.35s ease;
-	}
-
-	&:hover .image-container img {
-		transform: scale(1.05);
-	}
-
-	h4 {
-		color: ${({ theme }) => theme.text};
-		margin-bottom: 0.5rem;
-		font-weight: 600;
-	}
-
-	p {
-		color: ${({ theme }) => theme.subtleText};
-		margin: 0;
-		font-size: 0.95rem;
-		line-height: 1.5;
-	}
-`
-
-const InfoBlock = styled(motion.div)`
-	color: ${({ theme }) => theme.text};
-	font-size: 1rem;
-	line-height: 1.7;
-	margin-top: 0.5rem;
-
-	ul {
-		margin: 0.75rem 0 0 1.1rem;
-		color: ${({ theme }) => theme.subtleText};
-	}
-
-	li { margin-bottom: 0.4rem; }
-`
-
-const HighlightsGrid = styled(motion.div)`
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0.9rem;
-	margin-top: 1rem;
-
-	@media (max-width: 992px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media (max-width: 576px) {
-		grid-template-columns: 1fr;
-	}
-`
-
-const HighlightCard = styled(motion.div)`
-	background: ${({ theme }) => theme.background};
-	border: 1px solid rgba(0,0,0,0.06);
-	border-radius: 12px;
-	padding: 14px;
-
-	.title { font-weight: 600; color: ${({ theme }) => theme.text}; margin-bottom: 4px; }
-	.desc { color: ${({ theme }) => theme.subtleText}; font-size: 0.95rem; }
-`
-
-const ServicesList = styled(motion.div)`
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 0.75rem 1rem;
-	margin-top: 0.75rem;
-
-	@media (max-width: 576px) {
-		grid-template-columns: 1fr;
-	}
-`
-
-const ServiceItem = styled(motion.div)`
-	display: flex;
-	align-items: flex-start;
-	gap: 10px;
-	padding: 10px 12px;
-	border: 1px solid rgba(0,0,0,0.06);
-	border-radius: 12px;
-	background: ${({ theme }) => theme.background};
-
-	.badge {
-		flex: 0 0 auto;
-		width: 30px;
-		height: 30px;
-		border-radius: 8px;
-		background: ${({ theme }) => theme.primary};
-		color: #fff;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 16px;
-	}
-
-	.text {
-		color: ${({ theme }) => theme.text};
-		font-size: 0.95rem;
-		line-height: 1.45;
-	}
-`
-
-const ThemeSelector = styled.div`
-	position: relative;
-	display: flex;
-	gap: 10px;
-	justify-content: flex-end;
-	margin-bottom: 1rem;
-`
-
-const ThemeDot = styled.button`
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	border: 2px solid #fff;
-	cursor: pointer;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-`
-
-const containerVariants = {
-	hidden: { opacity: 0, y: 24 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.5, when: 'beforeChildren', staggerChildren: 0.12 }
-	}
-}
-
-const itemVariants = {
-	hidden: { opacity: 0, y: 16 },
-	visible: { opacity: 1, y: 0, transition: { duration: 0.45 } }
-}
 
 function GuardingServices() {
-	const prefersReducedMotion = useReducedMotion()
-	const [isMobile, setIsMobile] = React.useState(false)
-
-	React.useEffect(() => {
-		const mediaQuery = window.matchMedia('(max-width: 576px)')
-		const update = () => setIsMobile(mediaQuery.matches)
-		update()
-		mediaQuery.addEventListener?.('change', update)
-		return () => mediaQuery.removeEventListener?.('change', update)
-	}, [])
-
-	const motionEnabled = !(prefersReducedMotion || isMobile)
-
-	const sectionCardMotionProps = motionEnabled
-		? { variants: containerVariants, initial: 'hidden', whileInView: 'visible', viewport: { once: true, amount: 0.25 } }
-		: {}
-
-	const containerMotionProps = motionEnabled ? { variants: containerVariants } : {}
-
 	return (
 		<div>
+
 			{/* <!-- Topbar Start --> */}
 			<div className="container-fluid bg-dark py-2 d-none d-md-flex">
 				<div className="container">
@@ -257,8 +14,7 @@ function GuardingServices() {
 							<small className="me-3 text-white-50"><a href="#"><i
 								className="fas fa-envelope me-2 text-secondary"></i></a>info@dicel.co.rw</small>
 						</div>
-						<div id="note" className="text-secondary d-none d-xl-flex"><small>Note : We help you to Grow your
-							Business</small></div>
+						<div id="note" className="text-secondary d-none d-xl-flex"><small>Licensed Security Solutions Provider Since 2017</small></div>
 						<div className="top-link">
 							<a href="#" className="bg-light nav-fill btn btn-sm-square rounded-circle"><i
 								className="fab fa-facebook-f text-primary"></i></a>
@@ -313,166 +69,628 @@ function GuardingServices() {
 				</div>
 			</div>
 			{/* <!-- Navbar End --> */}
-			{/* <!-- Page Header Start --> */}
-			<div className="container-fluid page-header py-5">
-				<div className="container text-center py-5">
-					<h1 className="display-2 text-white mb-4 animated slideInDown">Guarding Services</h1>
+			{/* <!-- Hero Section Start --> */}
+			<div className="container-fluid px-0 position-relative" style={{ height: '70vh', minHeight: '500px' }}>
+				<div className="position-relative w-100 h-100">
+					<img src="assets/img/1.jpeg" className="img-fluid w-100 h-100" alt="Guarding Services" style={{ objectFit: 'cover' }} />
+					{/* Brand Color Overlay */}
+					<div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
+						background: 'linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(0, 86, 179, 0.15) 100%)',
+						zIndex: 1
+					}}></div>
+				</div>
+				<div className="carousel-caption">
+					<div className="container carousel-content position-relative" style={{ zIndex: 2 }}>
+						<div className="mb-3">
+							<span className="badge bg-white text-primary px-4 py-2 rounded-pill fs-6 fw-bold">
+								PROFESSIONAL SECURITY SERVICES
+							</span>
+						</div>
+						<h1 className="text-white display-1 mb-4 animated fadeInRight fw-bold" style={{ 
+							textShadow: '0 4px 20px rgba(0,0,0,0.5)',
+							lineHeight: '1.1'
+						}}>
+							Elite Guarding<br />
+							<span className="text-warning">Services</span>
+						</h1>
+						<p className="mb-4 text-white fs-5 animated fadeInDown" style={{ 
+							textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+							maxWidth: '800px',
+							margin: '0 auto 2rem'
+						}}>
+							Highly trained security professionals providing comprehensive protection solutions for residential, commercial, and industrial properties.
+						</p>
+						<div className="d-flex flex-wrap justify-content-center gap-3">
+							<a href="#services" className="me-2">
+								<button type="button" className="px-5 py-3 btn btn-warning rounded-pill carousel-content-btn1 animated fadeInLeft fw-bold" style={{
+									fontSize: '1.1rem',
+									boxShadow: '0 8px 25px rgba(255, 193, 7, 0.4)',
+									transition: 'all 0.3s ease'
+								}}>
+									<i className="fas fa-shield-alt me-2"></i>Our Services
+								</button>
+							</a>
+							<a href="/contact" className="ms-2">
+								<button type="button" className="px-5 py-3 btn btn-outline-light rounded-pill carousel-content-btn2 animated fadeInRight fw-bold" style={{
+									fontSize: '1.1rem',
+									borderWidth: '2px',
+									transition: 'all 0.3s ease'
+								}}>
+									<i className="fas fa-phone me-2"></i>Get Quote
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				{/* Floating Elements */}
+				<div className="position-absolute" style={{ top: '20%', right: '10%', opacity: '0.1' }}>
+					<i className="fas fa-shield-alt text-white" style={{ fontSize: '8rem' }}></i>
+				</div>
+				<div className="position-absolute" style={{ bottom: '20%', left: '5%', opacity: '0.1' }}>
+					<i className="fas fa-user-shield text-white" style={{ fontSize: '6rem' }}></i>
 				</div>
 			</div>
-			{/* <!-- Page Header End --> */}
+			{/* <!-- Hero Section End --> */}
 
-			{/* Themed Guarding Section */}
-			<ThemeProvider theme={themes.light}>
-				<PageSection>
-					<SectionContainer>
-						<ThemeSelector>
-							<ThemeDot style={{ background: themes.light.primary }} aria-label="Light theme" />
-							<ThemeDot style={{ background: themes.dark.primary }} aria-label="Dark theme" />
-						</ThemeSelector>
-						<SectionCard
-							{...sectionCardMotionProps}
-						>
-							<SectionHeader>
-								<motion.h2 variants={itemVariants}>Professional Manned Guarding</motion.h2>
-								<motion.p variants={itemVariants}>Licensed guards, clear post orders, and proactive site protection across sectors.</motion.p>
-							</SectionHeader>
-							<FeatureGrid {...containerMotionProps}>
-								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
-									<div className="image-container">
-										<img src="assets/img/1.jpeg" alt="Residential Security" loading="lazy" decoding="async" />
-									</div>
-									<h4>Residential Security</h4>
-									<p>Estate gates, visitor control, night watch and rapid incident escalation.</p>
-								</FeatureCard>
-								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
-									<div className="image-container">
-										<img src="assets/img/admin.jpg" alt="Corporate & Office" loading="lazy" decoding="async" />
-									</div>
-									<h4>Corporate & Office</h4>
-									<p>Reception security, access control, CCTV watch and emergency procedures.</p>
-								</FeatureCard>
-								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
-									<div className="image-container">
-										<img src="assets/img/project-3.jpg" alt="Industrial & Construction" loading="lazy" decoding="async" />
-									</div>
-									<h4>Industrial & Construction</h4>
-									<p>Perimeter patrols, tool/material checks, and safety compliance support.</p>
-								</FeatureCard>
-								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
-									<div className="image-container">
-										<img src="assets/img/project-6.jpg" alt="VIP & Executive" loading="lazy" decoding="async" />
-									</div>
-									<h4>VIP & Executive</h4>
-									<p>Close protection detail, route planning, and low‑profile secure movement.</p>
-								</FeatureCard>
-								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
-									<div className="image-container">
-										<img src="assets/img/t.JPG" alt="Mobile Patrol & Response" loading="lazy" decoding="async" />
-									</div>
-									<h4>Mobile Patrol & Response</h4>
-									<p>Scheduled/adhoc patrols, alarm response, and secure lock/unlock routines.</p>
-								</FeatureCard>
-								<FeatureCard variants={itemVariants} {...(motionEnabled ? { whileHover: { scale: 1.02 } } : {})}>
-									<div className="image-container">
-										<img src="assets/img/team-1.jpg" alt="Event Security" loading="lazy" decoding="async" />
-									</div>
-									<h4>Event Security</h4>
-									<p>Crowd control, screening and steward coordination for safe experiences.</p>
-								</FeatureCard>
-							</FeatureGrid>
+			{/* <!-- Statistics Start --> */}
+			<div className="py-5" style={{ 
+				background: 'linear-gradient(135deg, #0d6efd 0%, #0056b3 100%)',
+				position: 'relative'
+			}}>
+				{/* Background Pattern */}
+				<div className="position-absolute w-100 h-100" style={{
+					background: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+					opacity: 0.3
+				}}></div>
+				
+				<div className="container position-relative">
+					<div className="row g-4">
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center p-3 h-100" style={{
+								background: 'rgba(255,255,255,0.1)',
+								borderRadius: '16px',
+								backdropFilter: 'blur(10px)',
+								border: '1px solid rgba(255,255,255,0.2)',
+								transition: 'all 0.3s ease'
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.transform = 'translateY(-5px)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.transform = 'translateY(0)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+							}}>
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" 
+									 style={{ 
+										 width: '60px', 
+										 height: '60px', 
+										 background: 'linear-gradient(135deg, #ffc107 0%, #fd7e14 100%)',
+										 boxShadow: '0 6px 20px rgba(255, 193, 7, 0.3)'
+									 }}>
+									<i className="fas fa-users text-white fa-lg"></i>
+								</div>
+								<h3 className="fw-bold text-white mb-1 counter-value" style={{ fontSize: '2.2rem' }}>500+</h3>
+								<p className="text-white mb-0 fw-medium" style={{ fontSize: '0.9rem', lineHeight: '1.3' }}>Trained Guards<br />Professional Security Personnel</p>
+							</div>
+						</div>
+						
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center p-3 h-100" style={{
+								background: 'rgba(255,255,255,0.1)',
+								borderRadius: '16px',
+								backdropFilter: 'blur(10px)',
+								border: '1px solid rgba(255,255,255,0.2)',
+								transition: 'all 0.3s ease'
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.transform = 'translateY(-5px)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.transform = 'translateY(0)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+							}}>
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" 
+									 style={{ 
+										 width: '60px', 
+										 height: '60px', 
+										 background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+										 boxShadow: '0 6px 20px rgba(40, 167, 69, 0.3)'
+									 }}>
+									<i className="fas fa-building text-white fa-lg"></i>
+								</div>
+								<h3 className="fw-bold text-white mb-1 counter-value" style={{ fontSize: '2.2rem' }}>350+</h3>
+								<p className="text-white mb-0 fw-medium" style={{ fontSize: '0.9rem', lineHeight: '1.3' }}>Sites Protected<br />Across Residential & Commercial</p>
+							</div>
+						</div>
+						
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center p-3 h-100" style={{
+								background: 'rgba(255,255,255,0.1)',
+								borderRadius: '16px',
+								backdropFilter: 'blur(10px)',
+								border: '1px solid rgba(255,255,255,0.2)',
+								transition: 'all 0.3s ease'
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.transform = 'translateY(-5px)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.transform = 'translateY(0)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+							}}>
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" 
+									 style={{ 
+										 width: '60px', 
+										 height: '60px', 
+										 background: 'linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%)',
+										 boxShadow: '0 6px 20px rgba(111, 66, 193, 0.3)'
+									 }}>
+									<i className="fas fa-clock text-white fa-lg"></i>
+								</div>
+								<h3 className="fw-bold text-white mb-1 counter-value" style={{ fontSize: '2.2rem' }}>24/7</h3>
+								<p className="text-white mb-0 fw-medium" style={{ fontSize: '0.9rem', lineHeight: '1.3' }}>Continuous Monitoring<br />Round-the-Clock Protection</p>
+							</div>
+						</div>
+						
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center p-3 h-100" style={{
+								background: 'rgba(255,255,255,0.1)',
+								borderRadius: '16px',
+								backdropFilter: 'blur(10px)',
+								border: '1px solid rgba(255,255,255,0.2)',
+								transition: 'all 0.3s ease'
+							}}
+							onMouseEnter={(e) => {
+								e.currentTarget.style.transform = 'translateY(-5px)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.15)';
+							}}
+							onMouseLeave={(e) => {
+								e.currentTarget.style.transform = 'translateY(0)';
+								e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+							}}>
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" 
+									 style={{ 
+										 width: '60px', 
+										 height: '60px', 
+										 background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
+										 boxShadow: '0 6px 20px rgba(220, 53, 69, 0.3)'
+									 }}>
+									<i className="fas fa-award text-white fa-lg"></i>
+								</div>
+								<h3 className="fw-bold text-white mb-1 counter-value" style={{ fontSize: '2.2rem' }}>8+</h3>
+								<p className="text-white mb-0 fw-medium" style={{ fontSize: '0.9rem', lineHeight: '1.3' }}>Years Experience<br />Trusted Security Provider</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* <!-- Statistics End --> */}
 
-							{/* Service Overview */}
-							<SectionHeader style={{ marginTop: '1.5rem' }}>
-								<motion.h2 variants={itemVariants}>Service Overview</motion.h2>
-								<motion.p variants={itemVariants}>Reliable on‑site presence backed by supervision, reporting and technology.</motion.p>
-							</SectionHeader>
-							<InfoBlock {...containerMotionProps}>
-								<motion.p variants={itemVariants}>
-									Our guards deter threats, assist staff and visitors, and respond to incidents according to clear post orders. Supervisors conduct checks, and we integrate with CCTV, access control and alarms for a stronger, data‑driven security posture.
-								</motion.p>
-								<HighlightsGrid variants={containerVariants}>
-									<HighlightCard variants={itemVariants}>
-										<div className="title">Vetting & Training</div>
-										<div className="desc">Background checks, induction, refreshers and site‑specific drills.</div>
-									</HighlightCard>
-									<HighlightCard variants={itemVariants}>
-										<div className="title">Supervision & Reporting</div>
-										<div className="desc">Routine supervisor visits and daily activity/incident reports.</div>
-									</HighlightCard>
-									<HighlightCard variants={itemVariants}>
-										<div className="title">24/7 Coverage</div>
-										<div className="desc">Day/night shifts, weekends and holidays covered as needed.</div>
-									</HighlightCard>
-									<HighlightCard variants={itemVariants}>
-										<div className="title">Tech‑Enabled</div>
-										<div className="desc">CCTV watch, access control, radios and incident escalation.</div>
-									</HighlightCard>
-								</HighlightsGrid>
-							</InfoBlock>
+			{/* <!-- About Start --> */}
+			<div className="py-5 bg-white">
+				<div className="container">
+					<div className="row g-5 align-items-center">
+						<div className="col-lg-6">
+							<div className="position-relative">
+								{/* Main Image */}
+								<div className="position-relative" style={{ zIndex: 2 }}>
+									<img src="assets/img/1.jpeg" 
+										 className="img-fluid rounded-4 shadow-lg" 
+										 alt="Guarding Services" 
+										 style={{ 
+											 width: '85%',
+											 transition: 'transform 0.3s ease'
+										 }}
+										 onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
+										 onMouseLeave={(e) => e.target.style.transform = 'scale(1)'} />
+								</div>
+								
+								{/* Overlay Image */}
+								<div className="position-absolute" style={{ 
+									top: '20%', 
+									right: '0%', 
+									zIndex: 3,
+									width: '70%'
+								}}>
+									<div className="p-3 bg-white rounded-4 shadow-lg">
+										<img src="assets/img/2.jpeg" 
+											 className="img-fluid rounded-3" 
+											 alt="Security Operations"
+											 style={{ 
+												 transition: 'transform 0.3s ease'
+											 }}
+											 onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+											 onMouseLeave={(e) => e.target.style.transform = 'scale(1)'} />
+									</div>
+								</div>
+								
+								{/* Decorative Elements */}
+								<div className="position-absolute" style={{ 
+									top: '-10px', 
+									left: '-10px', 
+									width: '100px', 
+									height: '100px',
+									background: 'linear-gradient(135deg, #0d6efd 0%, #0056b3 100%)',
+									borderRadius: '50%',
+									opacity: '0.1',
+									zIndex: 1
+								}}></div>
+								
+								<div className="position-absolute" style={{ 
+									bottom: '-20px', 
+									right: '10%', 
+									width: '80px', 
+									height: '80px',
+									background: 'linear-gradient(135deg, #ffc107 0%, #fd7e14 100%)',
+									borderRadius: '50%',
+									opacity: '0.2',
+									zIndex: 1
+								}}></div>
+							</div>
+						</div>
+						
+						<div className="col-lg-6">
+							<div className="ps-lg-4">
+								{/* Section Badge */}
+								<div className="mb-4">
+									<span className="badge bg-primary text-white px-4 py-2 rounded-pill fs-6 fw-semibold">
+										<i className="fas fa-shield-alt me-2"></i>GUARDING SERVICES
+									</span>
+								</div>
+								
+								{/* Main Heading */}
+								<h2 className="display-5 fw-bold text-dark mb-4" style={{ lineHeight: '1.2' }}>
+									Professional <span className="text-primary">Guarding</span><br />
+									Services
+								</h2>
+								
+								{/* Description */}
+								<p className="text-muted mb-4" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
+									Our highly trained security personnel provide comprehensive protection for residential, 
+									commercial, and industrial properties. With 24/7 monitoring and rapid response capabilities, 
+									we ensure your safety and peace of mind.
+								</p>
+								
+								{/* Mission */}
+								<div className="mb-4 p-4 rounded-3" style={{ background: 'rgba(13, 110, 253, 0.05)' }}>
+									<h5 className="text-primary fw-bold mb-3">
+										<i className="fas fa-user-shield me-2"></i>Our Approach
+									</h5>
+									<p className="text-dark mb-0">
+										We deploy experienced security guards with comprehensive training in access control, 
+										patrol procedures, and emergency response protocols.
+									</p>
+								</div>
+								
+								{/* Vision */}
+								<div className="mb-4 p-4 rounded-3" style={{ background: 'rgba(255, 193, 7, 0.1)' }}>
+									<h5 className="text-warning fw-bold mb-3">
+										<i className="fas fa-clock me-2"></i>24/7 Protection
+									</h5>
+									<p className="text-dark mb-0">
+										Round-the-clock security coverage with trained personnel, advanced communication systems, 
+										and rapid response capabilities for immediate threat mitigation.
+									</p>
+								</div>
+								
+								{/* CTA Button */}
+								<a href="/contact" className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-semibold" style={{
+									background: 'linear-gradient(135deg, #0d6efd 0%, #0056b3 100%)',
+									border: 'none',
+									boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)',
+									transition: 'all 0.3s ease'
+								}}
+								onMouseEnter={(e) => {
+									e.target.style.transform = 'translateY(-3px)';
+									e.target.style.boxShadow = '0 12px 35px rgba(13, 110, 253, 0.4)';
+								}}
+								onMouseLeave={(e) => {
+									e.target.style.transform = 'translateY(0)';
+									e.target.style.boxShadow = '0 8px 25px rgba(13, 110, 253, 0.3)';
+								}}>
+									<i className="fas fa-phone me-2"></i>Get Quote
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* <!-- About End --> */}
 
-							{/* What We Provide */}
-							<SectionHeader style={{ marginTop: '2rem' }}>
-								<motion.h2 variants={itemVariants}>What We Provide</motion.h2>
-								<motion.p variants={itemVariants}>From assessment and post orders to deployment and reports.</motion.p>
-							</SectionHeader>
-							<ServicesList {...containerMotionProps}>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Site survey, risk assessment and guarding plan</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Clear post orders and escalation matrix</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Guard deployment, uniform and equipment</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Access control and visitor management</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Patrols, incident response and first aid</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Daily activity logs and incident reports</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Emergency drills and evacuation support</div>
-								</ServiceItem>
-								<ServiceItem variants={itemVariants}>
-									<div className="badge"><i className="fas fa-check"></i></div>
-									<div className="text">Customer service and reception assistance</div>
-								</ServiceItem>
-							</ServicesList>
+			{/* <!-- Why Choose Us Start --> */}
+			<div className="py-5" style={{ background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)' }}>
+				<div className="container">
+					<div className="row mb-5">
+						<div className="col-lg-8 mx-auto text-center">
+							<div className="mb-4">
+								<span className="badge bg-primary text-white px-4 py-2 rounded-pill fs-6 fw-semibold">
+									<i className="fas fa-star me-2"></i>WHY CHOOSE US
+								</span>
+							</div>
+							<h2 className="display-5 fw-bold text-dark mb-4" style={{ lineHeight: '1.2' }}>
+								Why Choose <span className="text-primary">Dicel Security</span>
+							</h2>
+							<p className="lead text-muted mb-0" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
+								We deliver exceptional security services with professional excellence, advanced technology, 
+								and unwavering commitment to your safety and peace of mind.
+							</p>
+						</div>
+					</div>
+					
+					<div className="row g-4">
+						{/* Residential Security */}
+						<div className="col-lg-4 col-md-6">
+							<div className="card border-0 shadow-lg h-100" style={{ transition: 'all 0.3s ease' }}
+								 onMouseEnter={(e) => {
+									 e.currentTarget.style.transform = 'translateY(-10px)';
+									 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+								 }}
+								 onMouseLeave={(e) => {
+									 e.currentTarget.style.transform = 'translateY(0)';
+									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+								 }}>
+								<div className="position-relative overflow-hidden">
+									<img src="assets/img/1.jpeg" className="card-img-top" alt="Residential Security" 
+										 style={{ height: '250px', objectFit: 'cover' }} />
+									<div className="position-absolute top-0 start-0 m-3">
+										<span className="badge bg-primary px-3 py-2 rounded-pill">RESIDENTIAL</span>
+									</div>
+								</div>
+								<div className="card-body p-4">
+									<h4 className="card-title fw-bold mb-3">Residential Security</h4>
+									<p className="card-text text-muted mb-4">Comprehensive protection for homes, estates, and gated communities with professional guards and advanced monitoring systems.</p>
+									<ul className="list-unstyled mb-4">
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Gate Control & Access Management</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Visitor Registration & Screening</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>24/7 Patrol Services</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Emergency Response</li>
+									</ul>
+									<a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Learn More</a>
+								</div>
+							</div>
+						</div>
 
-							{/* Floating decorative accents */}
-							{motionEnabled && (
-								<>
-									<motion.div
-										aria-hidden
-										style={{ position: 'absolute', top: -20, right: -20, width: 80, height: 80, borderRadius: 16, background: 'rgba(9,132,227,0.15)', zIndex: 1 }}
-										initial={{ y: -6, opacity: 0.6 }}
-										animate={{ y: 6, opacity: 0.9 }}
-										transition={{ repeat: Infinity, repeatType: 'reverse', duration: 3 }}
-									/>
-									<motion.div
-										aria-hidden
-										style={{ position: 'absolute', bottom: -24, left: -24, width: 100, height: 100, borderRadius: '50%', background: 'rgba(116,185,255,0.18)', zIndex: 1 }}
-										initial={{ y: 0, opacity: 0.5 }}
-										animate={{ y: -10, opacity: 0.8 }}
-										transition={{ repeat: Infinity, repeatType: 'mirror', duration: 4 }}
-									/>
-								</>
-							)}
-						</SectionCard>
-					</SectionContainer>
-				</PageSection>
-			</ThemeProvider>
+						{/* Corporate Security */}
+						<div className="col-lg-4 col-md-6">
+							<div className="card border-0 shadow-lg h-100" style={{ transition: 'all 0.3s ease' }}
+								 onMouseEnter={(e) => {
+									 e.currentTarget.style.transform = 'translateY(-10px)';
+									 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+								 }}
+								 onMouseLeave={(e) => {
+									 e.currentTarget.style.transform = 'translateY(0)';
+									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+								 }}>
+								<div className="position-relative overflow-hidden">
+									<img src="assets/img/admin.jpg" className="card-img-top" alt="Corporate Security" 
+										 style={{ height: '250px', objectFit: 'cover' }} />
+									<div className="position-absolute top-0 start-0 m-3">
+										<span className="badge bg-success px-3 py-2 rounded-pill">CORPORATE</span>
+									</div>
+								</div>
+								<div className="card-body p-4">
+									<h4 className="card-title fw-bold mb-3">Corporate & Office Security</h4>
+									<p className="card-text text-muted mb-4">Professional security solutions for offices, commercial buildings, and business premises with trained personnel.</p>
+									<ul className="list-unstyled mb-4">
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Reception & Lobby Security</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Employee & Visitor Management</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Asset Protection</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>After-Hours Monitoring</li>
+									</ul>
+									<a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Learn More</a>
+								</div>
+							</div>
+						</div>
+
+						{/* Industrial Security */}
+						<div className="col-lg-4 col-md-6">
+							<div className="card border-0 shadow-lg h-100" style={{ transition: 'all 0.3s ease' }}
+								 onMouseEnter={(e) => {
+									 e.currentTarget.style.transform = 'translateY(-10px)';
+									 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+								 }}
+								 onMouseLeave={(e) => {
+									 e.currentTarget.style.transform = 'translateY(0)';
+									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+								 }}>
+								<div className="position-relative overflow-hidden">
+									<img src="assets/img/project-3.jpg" className="card-img-top" alt="Industrial Security" 
+										 style={{ height: '250px', objectFit: 'cover' }} />
+									<div className="position-absolute top-0 start-0 m-3">
+										<span className="badge bg-warning px-3 py-2 rounded-pill">INDUSTRIAL</span>
+									</div>
+								</div>
+								<div className="card-body p-4">
+									<h4 className="card-title fw-bold mb-3">Industrial & Construction</h4>
+									<p className="card-text text-muted mb-4">Specialized security for industrial facilities, construction sites, and manufacturing plants with enhanced safety protocols.</p>
+									<ul className="list-unstyled mb-4">
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Perimeter Security</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Equipment & Material Protection</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Safety Compliance Support</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Site Access Control</li>
+									</ul>
+									<a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Learn More</a>
+								</div>
+							</div>
+						</div>
+
+						{/* VIP Protection */}
+						<div className="col-lg-4 col-md-6">
+							<div className="card border-0 shadow-lg h-100" style={{ transition: 'all 0.3s ease' }}
+								 onMouseEnter={(e) => {
+									 e.currentTarget.style.transform = 'translateY(-10px)';
+									 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+								 }}
+								 onMouseLeave={(e) => {
+									 e.currentTarget.style.transform = 'translateY(0)';
+									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+								 }}>
+								<div className="position-relative overflow-hidden">
+									<img src="assets/img/project-6.jpg" className="card-img-top" alt="VIP Protection" 
+										 style={{ height: '250px', objectFit: 'cover' }} />
+									<div className="position-absolute top-0 start-0 m-3">
+										<span className="badge bg-danger px-3 py-2 rounded-pill">VIP</span>
+									</div>
+								</div>
+								<div className="card-body p-4">
+									<h4 className="card-title fw-bold mb-3">VIP & Executive Protection</h4>
+									<p className="card-text text-muted mb-4">Elite close protection services for high-profile individuals, executives, and dignitaries with discrete security measures.</p>
+									<ul className="list-unstyled mb-4">
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Personal Protection Detail</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Route Planning & Security</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Event Security Coordination</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Threat Assessment</li>
+									</ul>
+									<a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Learn More</a>
+								</div>
+							</div>
+						</div>
+
+						{/* Mobile Patrol */}
+						<div className="col-lg-4 col-md-6">
+							<div className="card border-0 shadow-lg h-100" style={{ transition: 'all 0.3s ease' }}
+								 onMouseEnter={(e) => {
+									 e.currentTarget.style.transform = 'translateY(-10px)';
+									 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+								 }}
+								 onMouseLeave={(e) => {
+									 e.currentTarget.style.transform = 'translateY(0)';
+									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+								 }}>
+								<div className="position-relative overflow-hidden">
+									<img src="assets/img/t.JPG" className="card-img-top" alt="Mobile Patrol" 
+										 style={{ height: '250px', objectFit: 'cover' }} />
+									<div className="position-absolute top-0 start-0 m-3">
+										<span className="badge bg-info px-3 py-2 rounded-pill">MOBILE</span>
+									</div>
+								</div>
+								<div className="card-body p-4">
+									<h4 className="card-title fw-bold mb-3">Mobile Patrol Services</h4>
+									<p className="card-text text-muted mb-4">Dynamic security patrols covering multiple locations with rapid response capabilities and comprehensive reporting.</p>
+									<ul className="list-unstyled mb-4">
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Scheduled Patrol Routes</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Alarm Response Services</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Lock-up & Opening Services</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Incident Reporting</li>
+									</ul>
+									<a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Learn More</a>
+								</div>
+							</div>
+						</div>
+
+						{/* Event Security */}
+						<div className="col-lg-4 col-md-6">
+							<div className="card border-0 shadow-lg h-100" style={{ transition: 'all 0.3s ease' }}
+								 onMouseEnter={(e) => {
+									 e.currentTarget.style.transform = 'translateY(-10px)';
+									 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+								 }}
+								 onMouseLeave={(e) => {
+									 e.currentTarget.style.transform = 'translateY(0)';
+									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+								 }}>
+								<div className="position-relative overflow-hidden">
+									<img src="assets/img/team-1.jpg" className="card-img-top" alt="Event Security" 
+										 style={{ height: '250px', objectFit: 'cover' }} />
+									<div className="position-absolute top-0 start-0 m-3">
+										<span className="badge bg-secondary px-3 py-2 rounded-pill">EVENTS</span>
+									</div>
+								</div>
+								<div className="card-body p-4">
+									<h4 className="card-title fw-bold mb-3">Event Security Management</h4>
+									<p className="card-text text-muted mb-4">Comprehensive security planning and execution for events, conferences, and gatherings of all sizes.</p>
+									<ul className="list-unstyled mb-4">
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Crowd Control Management</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Entry & Exit Screening</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Emergency Evacuation Plans</li>
+										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Coordination with Authorities</li>
+									</ul>
+									<a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* <!-- Services Grid End --> */}
+
+			{/* <!-- Why Choose Us Start --> */}
+			<div className="py-5" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+				<div className="container">
+					<div className="row mb-5">
+						<div className="col-lg-8 mx-auto text-center">
+							<h2 className="display-5 fw-bold text-white mb-3">Why Choose Our Guards?</h2>
+							<p className="lead text-white-75">Professional excellence backed by training, technology, and trust.</p>
+						</div>
+					</div>
+					
+					<div className="row g-4">
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center text-white">
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" 
+									 style={{ width: '100px', height: '100px', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)' }}>
+									<i className="fas fa-graduation-cap fa-3x"></i>
+								</div>
+								<h4 className="fw-bold mb-3">Certified Training</h4>
+								<p className="mb-0">All guards undergo rigorous training and certification programs to ensure professional standards.</p>
+							</div>
+						</div>
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center text-white">
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" 
+									 style={{ width: '100px', height: '100px', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)' }}>
+									<i className="fas fa-shield-alt fa-3x"></i>
+								</div>
+								<h4 className="fw-bold mb-3">Licensed & Insured</h4>
+								<p className="mb-0">Fully licensed security company with comprehensive insurance coverage for complete peace of mind.</p>
+							</div>
+						</div>
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center text-white">
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" 
+									 style={{ width: '100px', height: '100px', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)' }}>
+									<i className="fas fa-headset fa-3x"></i>
+								</div>
+								<h4 className="fw-bold mb-3">24/7 Support</h4>
+								<p className="mb-0">Round-the-clock monitoring and support with immediate response to any security concerns.</p>
+							</div>
+						</div>
+						<div className="col-lg-3 col-md-6">
+							<div className="text-center text-white">
+								<div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" 
+									 style={{ width: '100px', height: '100px', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)' }}>
+									<i className="fas fa-chart-line fa-3x"></i>
+								</div>
+								<h4 className="fw-bold mb-3">Proven Results</h4>
+								<p className="mb-0">Track record of successful security operations with measurable results and client satisfaction.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* <!-- Why Choose Us End --> */}
+
+			{/* <!-- CTA Section Start --> */}
+			<div className="py-5 bg-dark">
+				<div className="container">
+					<div className="row align-items-center">
+						<div className="col-lg-8">
+							<h3 className="text-white fw-bold mb-2">Ready to Secure Your Property?</h3>
+							<p className="text-white-75 mb-0">Get a customized security assessment and quote for your specific needs.</p>
+						</div>
+						<div className="col-lg-4 text-lg-end">
+							<a href="/contact" className="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-semibold">
+								<i className="fas fa-phone me-2"></i>Get Free Quote
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* <!-- CTA Section End --> */}
 
 			{/* <!-- Footer Start --> */}
 			<div className="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
@@ -532,8 +750,8 @@ function GuardingServices() {
 				</div>
 			</div>
 			{/* <!-- Footer End --> */}
-		</div>
-	)
+        </div>
+    )
 }
 
 export default GuardingServices

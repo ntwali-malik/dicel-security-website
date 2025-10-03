@@ -9,6 +9,8 @@ import MetalDetector from './Company/services/MetalDetector';
 import AlarmSystems from './Company/services/AlarmSystems';
 import ConsultingServices from './Company/services/ConsultingServices';
 import GuardingServices from './Company/services/GuardingServices';
+import SecurityEquipment from './Company/services/SecurityEquipment';
+import Stewards from './Company/services/Stewards';
 import AccessControl from './Company/AccessControl';
 import SecurityGuard from './Company/SecurityGuard';
 
@@ -26,7 +28,10 @@ function App() {
         <Route path="/alarm-systems" element={<AlarmSystems />} />
         <Route path="/access-control" element={<AccessControl />} />
         <Route path="/consulting" element={<ConsultingServices />} />
+        <Route path="/security-consultancy" element={<ConsultingServices />} />
+        <Route path="/security-equipment" element={<SecurityEquipment />} />
         <Route path="/guarding-services" element={<GuardingServices />} />
+        <Route path="/stewards" element={<Stewards />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
