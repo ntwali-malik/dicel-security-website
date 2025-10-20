@@ -358,8 +358,8 @@ function AlarmSystems() {
                                 </a>
                             </div>
                             <div className="d-flex flex-column pe-4 border-end">
-                                <span className="text-white-50">Have any questions?</span>
-                                <span className="text-secondary">Call: +250 788 313 547</span>
+                                <span className="text-white">Have any questions?</span>
+                                <span className="text-white">Call: 3024</span>
                             </div>
                         </div>
                     </nav>
@@ -619,8 +619,8 @@ function AlarmSystems() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                             </div>

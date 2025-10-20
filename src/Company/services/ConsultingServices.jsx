@@ -61,8 +61,8 @@ function ConsultingServices() {
                                 </a>
                             </div>
                             <div className="d-flex flex-column pe-4 border-end">
-                                <span className="text-white-50">Have any questions?</span>
-                                <span className="text-secondary">Call: +250 788 313 547</span>
+                                <span className="text-white">Have any questions?</span>
+                                <span className="text-white">Call: 3024</span>
                             </div>
                         </div>
                     </nav>
@@ -446,7 +446,7 @@ function ConsultingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Risk Mitigation Plans</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Business Impact Analysis</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Request Risk Assessment</a>
 								</div>
 							</div>
 						</div>
@@ -475,7 +475,7 @@ function ConsultingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Performance Metrics</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Quality Assurance</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Optimize Security Operations</a>
 								</div>
 							</div>
 						</div>
@@ -504,7 +504,7 @@ function ConsultingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Certification Support</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Audit Preparation</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Get Compliance Support</a>
 								</div>
 							</div>
 						</div>
@@ -533,7 +533,7 @@ function ConsultingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Vendor Selection</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Implementation Planning</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Plan Technology Integration</a>
 								</div>
 							</div>
 						</div>
@@ -562,7 +562,7 @@ function ConsultingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Skills Assessment</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Certification Programs</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Schedule Training</a>
 								</div>
 							</div>
 						</div>
@@ -591,7 +591,7 @@ function ConsultingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Business Continuity</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Recovery Planning</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Build Crisis Plan</a>
 								</div>
 							</div>
 						</div>
@@ -606,7 +606,7 @@ function ConsultingServices() {
 					<div className="row mb-5">
 						<div className="col-lg-8 mx-auto text-center">
 							<h2 className="display-5 fw-bold text-white mb-3">Our Consulting Process</h2>
-							<p className="lead text-white-75">A structured approach to delivering strategic security solutions and measurable results.</p>
+							<p className="lead text-white">A structured approach to delivering strategic security solutions and measurable results.</p>
 						</div>
 					</div>
 					
@@ -777,8 +777,8 @@ function ConsultingServices() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                             </div>

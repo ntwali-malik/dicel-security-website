@@ -1,29 +1,19 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 
 function Gallery() {
-    const [activeFilter, setActiveFilter] = useState('all')
     const [lightboxImage, setLightboxImage] = useState(null)
     const [lightboxCaption, setLightboxCaption] = useState('')
 
-    const images = useMemo(() => ([
-        { src: 'assets/img/project-1.jpg', title: 'Modern Surveillance', category: 'cctv' },
-        { src: 'assets/img/project-2.jpg', title: 'Enterprise Access Control', category: 'access' },
-        { src: 'assets/img/project-3.jpg', title: 'Smart Alarm Systems', category: 'alarms' },
-        { src: 'assets/img/project-4.jpg', title: '24/7 Monitoring Center', category: 'monitoring' },
-        { src: 'assets/img/project-5.jpg', title: 'Perimeter Security', category: 'access' },
-        { src: 'assets/img/project-6.jpg', title: 'Thermal Cameras', category: 'cctv' },
-        { src: 'assets/img/alarms-system.png', title: 'Integrated Alarms', category: 'alarms' },
-        { src: 'assets/img/camera.png', title: 'AI Camera Setup', category: 'cctv' },
-        { src: 'assets/img/access-control.jpg', title: 'Biometric Controls', category: 'access' },
-        { src: 'assets/img/consulting-Service.jpg', title: 'Security Consulting', category: 'monitoring' },
-        { src: 'assets/img/about-1.jpg', title: 'On-site Assessment', category: 'monitoring' },
-        { src: 'assets/img/about-2.jpg', title: 'Incident Response', category: 'alarms' }
-    ]), [])
-
-    const filteredImages = useMemo(() => {
-        if (activeFilter === 'all') return images
-        return images.filter(img => img.category === activeFilter)
-    }, [activeFilter, images])
+    const images = [
+        { src: 'assets/img/1.jpeg', title: 'Modern Surveillance' },
+        { src: 'assets/img/2.jpeg', title: 'Enterprise Access Control' },
+        { src: 'assets/img/3.jpeg', title: 'Smart Alarm Systems' },
+        { src: 'assets/img/4.jpeg', title: '24/7 Monitoring Center' },
+        { src: 'assets/img/5.jpeg', title: 'Perimeter Security' },
+        { src: 'assets/img/6.jpeg', title: 'Thermal Cameras' },
+        { src: 'assets/img/7.jpeg', title: 'Thermal Cameras' },
+        { src: 'assets/img/10.jpg', title: 'Thermal Cameras' },
+    ]
 
     const openLightbox = (img) => {
         setLightboxImage(img.src)
@@ -88,7 +78,7 @@ function Gallery() {
                             {/* Small-screen contact actions */}
                             <div className="d-lg-none border-top mt-3 pt-3">
                                 <div className="d-flex align-items-center justify-content-between">
-                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>+250 788 313 547</a>
+                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>0788313547</a>
                                     <a href="mailto:info@dicel.co.rw" className="text-white text-decoration-none ms-3"><i className="fas fa-envelope me-2"></i>info@dicel.co.rw</a>
                                 </div>
                             </div>
@@ -114,7 +104,7 @@ function Gallery() {
             {/* <!-- Hero Section Start --> */}
             <div className="container-fluid px-0 position-relative" style={{ height: '70vh', minHeight: '500px' }}>
                 <div className="position-relative w-100 h-100">
-                    <img src="assets/img/t.JPG" className="img-fluid w-100 h-100" alt="Gallery - Dicel Security" 
+                    <img src="assets/img/3.jpeg" className="img-fluid w-100 h-100" alt="Gallery - Dicel Security" 
                          style={{ objectFit: 'cover' }} />
                     {/* Brand Color Overlay */}
                     <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
@@ -188,50 +178,10 @@ function Gallery() {
                     </div>
                 </div>
 
-                {/* Filters */}
-                    <div className="row mb-5">
-                        <div className="col-12 d-flex justify-content-center gap-3 flex-wrap">
-                            {[
-                                { key: 'all', label: 'All', icon: 'fas fa-th' },
-                                { key: 'cctv', label: 'CCTV', icon: 'fas fa-video' },
-                                { key: 'access', label: 'Access Control', icon: 'fas fa-key' },
-                                { key: 'alarms', label: 'Alarms', icon: 'fas fa-bell' },
-                                { key: 'monitoring', label: 'Monitoring', icon: 'fas fa-eye' },
-                        ].map(filter => (
-                            <button
-                                key={filter.key}
-                                onClick={() => setActiveFilter(filter.key)}
-                                    className={`btn px-4 py-2 rounded-pill fw-semibold ${activeFilter === filter.key 
-                                        ? 'btn-primary' 
-                                        : 'btn-outline-primary'}`}
-                                    style={{
-                                        transition: 'all 0.3s ease',
-                                        borderWidth: '2px',
-                                        fontSize: '0.95rem'
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        if (activeFilter !== filter.key) {
-                                            e.target.style.transform = 'translateY(-2px)';
-                                            e.target.style.boxShadow = '0 4px 12px rgba(13, 110, 253, 0.3)';
-                                        }
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        if (activeFilter !== filter.key) {
-                                            e.target.style.transform = 'translateY(0)';
-                                            e.target.style.boxShadow = 'none';
-                                        }
-                                    }}
-                                >
-                                    <i className={`${filter.icon} me-2`}></i>
-                                {filter.label}
-                            </button>
-                        ))}
-                    </div>
-                </div>
 
                 {/* Grid */}
                     <div className="row g-4">
-                    {filteredImages.map((img, idx) => {
+                    {images.map((img, idx) => {
                         return (
                                 <div key={`${img.src}-${idx}`} className="col-6 col-md-4 col-lg-3">
                                     <div className="position-relative overflow-hidden rounded-4 shadow-lg gallery-item" 
@@ -271,24 +221,12 @@ function Gallery() {
                                              onMouseEnter={e => e.target.style.opacity = 1}
                                              onMouseLeave={e => e.target.style.opacity = 0}>
                                             
-                                            {/* Icon and Title */}
+                                            {/* Icon Only */}
                                             <div className="text-center text-white">
-                                                <div className="mb-3">
-                                                    <i className="fas fa-search-plus fa-2x"></i>
-                                                </div>
-                                                <h6 className="fw-bold mb-0" style={{ fontSize: '0.9rem' }}>
-                                                    {img.title}
-                                                </h6>
+                                                <i className="fas fa-search-plus fa-2x"></i>
                                             </div>
                                         </div>
                                         
-                                        {/* Category Badge */}
-                                        <div className="position-absolute top-3 start-3">
-                                            <span className="badge bg-white text-primary px-3 py-2 rounded-pill fw-semibold" 
-                                                  style={{ fontSize: '0.75rem' }}>
-                                                {img.category.toUpperCase()}
-                                            </span>
-                                        </div>
                                 </div>
                             </div>
                         )
@@ -305,11 +243,10 @@ function Gallery() {
                         <div className="modal-dialog modal-dialog-centered modal-xl" onClick={(e) => e.stopPropagation()}>
                             <div className="modal-content bg-dark border-0">
                                 <div className="modal-header border-0">
-                                    <h5 className="modal-title text-white">{lightboxCaption}</h5>
                                     <button type="button" className="btn-close btn-close-white" aria-label="Close" onClick={closeLightbox}></button>
                                 </div>
                                 <div className="modal-body p-0">
-                                    <img src={lightboxImage} alt={lightboxCaption} className="img-fluid w-100" />
+                                    <img src={lightboxImage} alt="Gallery image" className="img-fluid w-100" />
                                 </div>
                                 <div className="modal-footer border-0">
                                     <button type="button" className="btn btn-secondary" onClick={closeLightbox}>Close</button>
@@ -361,8 +298,8 @@ function Gallery() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                                 <span className="pt-3 text-light"><i className="fas fa-id-badge text-primary me-2"></i> License No. 422/0809</span>

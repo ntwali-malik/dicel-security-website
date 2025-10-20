@@ -61,8 +61,8 @@ function GuardingServices() {
 								</a>
 							</div>
 							<div className="d-flex flex-column pe-4 border-end">
-								<span className="text-white-50">Have any questions?</span>
-								<span className="text-secondary">Call: +250 788 313 547</span>
+								<span className="text-white">Have any questions?</span>
+								<span className="text-white">Call: 3024</span>
 							</div>
 						</div>
 					</nav>
@@ -449,7 +449,7 @@ function GuardingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>24/7 Patrol Services</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Emergency Response</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Request Guarding Quote</a>
 								</div>
 							</div>
 						</div>
@@ -466,7 +466,7 @@ function GuardingServices() {
 									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
 								 }}>
 								<div className="position-relative overflow-hidden">
-									<img src="assets/img/admin.jpg" className="card-img-top" alt="Corporate Security" 
+									<img src="assets/img/10.jpg" className="card-img-top" alt="Corporate Security" 
 										 style={{ height: '250px', objectFit: 'cover' }} />
 									<div className="position-absolute top-0 start-0 m-3">
 										<span className="badge bg-success px-3 py-2 rounded-pill">CORPORATE</span>
@@ -481,7 +481,7 @@ function GuardingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Asset Protection</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>After-Hours Monitoring</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Book Site Assessment</a>
 								</div>
 							</div>
 						</div>
@@ -498,7 +498,7 @@ function GuardingServices() {
 									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
 								 }}>
 								<div className="position-relative overflow-hidden">
-									<img src="assets/img/project-3.jpg" className="card-img-top" alt="Industrial Security" 
+									<img src="assets/img/11.jpg" className="card-img-top" alt="Industrial Security" 
 										 style={{ height: '250px', objectFit: 'cover' }} />
 									<div className="position-absolute top-0 start-0 m-3">
 										<span className="badge bg-warning px-3 py-2 rounded-pill">INDUSTRIAL</span>
@@ -513,7 +513,7 @@ function GuardingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Safety Compliance Support</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Site Access Control</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Get Industrial Security Plan</a>
 								</div>
 							</div>
 						</div>
@@ -530,7 +530,7 @@ function GuardingServices() {
 									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
 								 }}>
 								<div className="position-relative overflow-hidden">
-									<img src="assets/img/project-6.jpg" className="card-img-top" alt="VIP Protection" 
+									<img src="assets/img/23.jpg" className="card-img-top" alt="VIP Protection" 
 										 style={{ height: '250px', objectFit: 'cover' }} />
 									<div className="position-absolute top-0 start-0 m-3">
 										<span className="badge bg-danger px-3 py-2 rounded-pill">VIP</span>
@@ -545,7 +545,7 @@ function GuardingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Event Security Coordination</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Threat Assessment</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Schedule VIP Protection</a>
 								</div>
 							</div>
 						</div>
@@ -562,7 +562,7 @@ function GuardingServices() {
 									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
 								 }}>
 								<div className="position-relative overflow-hidden">
-									<img src="assets/img/t.JPG" className="card-img-top" alt="Mobile Patrol" 
+									<img src="assets/img/24.JPG" className="card-img-top" alt="Mobile Patrol" 
 										 style={{ height: '250px', objectFit: 'cover' }} />
 									<div className="position-absolute top-0 start-0 m-3">
 										<span className="badge bg-info px-3 py-2 rounded-pill">MOBILE</span>
@@ -577,7 +577,7 @@ function GuardingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Lock-up & Opening Services</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Incident Reporting</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Arrange Mobile Patrol</a>
 								</div>
 							</div>
 						</div>
@@ -594,7 +594,7 @@ function GuardingServices() {
 									 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
 								 }}>
 								<div className="position-relative overflow-hidden">
-									<img src="assets/img/team-1.jpg" className="card-img-top" alt="Event Security" 
+									<img src="assets/img/5.jpeg" className="card-img-top" alt="Event Security" 
 										 style={{ height: '250px', objectFit: 'cover' }} />
 									<div className="position-absolute top-0 start-0 m-3">
 										<span className="badge bg-secondary px-3 py-2 rounded-pill">EVENTS</span>
@@ -609,7 +609,7 @@ function GuardingServices() {
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Emergency Evacuation Plans</li>
 										<li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Coordination with Authorities</li>
 									</ul>
-									<a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Plan Event Security</a>
 								</div>
 							</div>
 						</div>
@@ -624,7 +624,7 @@ function GuardingServices() {
 					<div className="row mb-5">
 						<div className="col-lg-8 mx-auto text-center">
 							<h2 className="display-5 fw-bold text-white mb-3">Why Choose Our Guards?</h2>
-							<p className="lead text-white-75">Professional excellence backed by training, technology, and trust.</p>
+							<p className="lead text-white">Professional excellence backed by training, technology, and trust.</p>
 						</div>
 					</div>
 					
@@ -731,8 +731,8 @@ function GuardingServices() {
 							<a href="#" className="h4 text-primary">Contact Us</a>
 							<div className="text-white mt-4 d-flex flex-column contact-link">
 								<span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-								<a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-								<a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+								<a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+								<a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
 								<a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
 								<span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
 							</div>

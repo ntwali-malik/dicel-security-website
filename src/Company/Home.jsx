@@ -52,7 +52,7 @@ function Home() {
                             {/* Small-screen contact actions */}
                             <div className="d-lg-none border-top mt-3 pt-3">
                                 <div className="d-flex align-items-center justify-content-between">
-                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>+250 788 313 547</a>
+                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>0788313547</a>
                                     <a href="mailto:info@dicel.co.rw" className="text-white text-decoration-none ms-3"><i className="fas fa-envelope me-2"></i>info@dicel.co.rw</a>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ function Home() {
                     <div className="carousel-inner" role="listbox">
                         <div className="carousel-item active">
                             <div className="position-relative">
-                                <img src="assets/img/t.JPG" className="img-fluid w-100" alt="First slide" style={{ height: '100vh', objectFit: 'cover' }} />
+                                <img src="assets/img/3.jpeg" className="img-fluid w-100" alt="First slide" style={{ height: '100vh', objectFit: 'cover' }} />
                                 {/* Brand Color Overlay */}
                                 <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
                                     background: 'linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(0, 86, 179, 0.15) 100%)',
@@ -138,7 +138,7 @@ function Home() {
                         </div>
                         <div className="carousel-item">
                             <div className="position-relative">
-                                <img src="assets/img/t.JPG" className="img-fluid w-100" alt="Second slide" style={{ height: '100vh', objectFit: 'cover' }} />
+                                <img src="assets/img/4.jpeg" className="img-fluid w-100" alt="Second slide" style={{ height: '100vh', objectFit: 'cover' }} />
                                 {/* Brand Color Overlay */}
                                 <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
                                     background: 'linear-gradient(135deg, rgba(0, 86, 179, 0.1) 0%, rgba(0, 64, 133, 0.15) 100%)',
@@ -1112,9 +1112,9 @@ function Home() {
                                 <div className="services-content text-center">
                                     <div className="mb-4 position-relative">
                                         <div className="overflow-hidden rounded-4 mb-3" style={{ height: '220px' }}>
-                                            <img src="assets/img/admin.jpg" alt="Stewards" 
+                                            <img src="assets/img/21.png" alt="Stewards" 
                                                  className="img-fluid w-100 h-100" 
-                                                 style={{ objectFit: 'cover', transition: 'transform 0.4s ease' }} 
+                                                 style={{ objectFit: 'cover', objectPosition: 'center top', transition: 'transform 0.4s ease' }} 
                                                  loading="lazy" decoding="async" 
                                                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
                                                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'} />
@@ -1399,11 +1399,12 @@ function Home() {
                     <div className="row g-4 justify-content-center">
                                     {/* Team Member 1 */}
                                     <div className="col-lg-4 col-md-6">
-                                        <div className="team-card bg-white overflow-hidden h-100" style={{
+                            <div className="team-card bg-white h-100" style={{
                                             border: '1px solid #e9ecef',
                                             borderRadius: '12px',
                                             transition: 'all 0.3s ease',
-                                            boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                                padding: '2rem'
                                         }}
                                         onMouseEnter={(e) => {
                                             e.currentTarget.style.transform = 'translateY(-5px)';
@@ -1415,87 +1416,37 @@ function Home() {
                                             e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                                             e.currentTarget.style.borderColor = '#e9ecef';
                                         }}>
-                                            <div className="position-relative">
-                                                <img src="assets/img/team-1.jpg" className="img-fluid w-100" alt="Manzi Cedric" 
-                                                     style={{ 
-                                                         height: '320px', 
-                                                         objectFit: 'cover',
-                                                         filter: 'grayscale(20%) brightness(1.1)'
-                                                     }} />
-                                                
-                                                {/* Professional Overlay */}
-                                                <div className="position-absolute bottom-0 start-0 w-100" style={{
-                                                    background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                                                    height: '100px'
-                                                }}></div>
-                                                
-                                                {/* Social Links */}
-                                                <div className="position-absolute top-3 end-3">
-                                                    <div className="d-flex flex-column gap-2">
-                                                        <a href="#" className="btn btn-sm" style={{ 
-                                                            width: '36px', 
-                                                            height: '36px',
-                                                            background: 'rgba(255,255,255,0.9)',
-                                                            borderRadius: '8px',
+                                <div className="text-center">
+                                    {/* Icon Placeholder */}
+                                    <div className="mb-4 d-flex justify-content-center">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #0d6efd, #6f42c1)',
+                                            borderRadius: '50%',
                                                             display: 'flex',
                                                             alignItems: 'center',
                                                             justifyContent: 'center',
-                                                            transition: 'all 0.3s ease'
-                                                        }}
-                                                        onMouseEnter={(e) => {
-                                                            e.target.style.background = '#0d6efd';
-                                                            e.target.querySelector('i').style.color = 'white';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                            e.target.querySelector('i').style.color = '#0d6efd';
-                                                        }}>
-                                                            <i className="fab fa-linkedin-in" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                                        </a>
-                                                        <a href="#" className="btn btn-sm" style={{ 
-                                                            width: '36px', 
-                                                            height: '36px',
-                                                            background: 'rgba(255,255,255,0.9)',
-                                                            borderRadius: '8px',
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'center',
-                                                            transition: 'all 0.3s ease'
-                                                        }}
-                                                        onMouseEnter={(e) => {
-                                                            e.target.style.background = '#0d6efd';
-                                                            e.target.querySelector('i').style.color = 'white';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                            e.target.querySelector('i').style.color = '#0d6efd';
-                                                        }}>
-                                                            <i className="fas fa-envelope" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                                        </a>
-                                                    </div>
+                                            boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)'
+                                        }}>
+                                            <i className="fas fa-user text-white" style={{ fontSize: '2rem' }}></i>
                                                 </div>
                                             </div>
                                             
-                                            <div className="p-4 text-center">
-                                                <h4 className="fw-bold text-dark mb-1" style={{ fontSize: '1.25rem', letterSpacing: '-0.02em' }}>Manzi Cedric</h4>
-                                                <p className="text-primary fw-semibold mb-2" style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Managing Director</p>
-                                                <div className="d-flex justify-content-center mb-3">
-                                                    <div style={{ width: '40px', height: '2px', background: '#0d6efd' }}></div>
-                                                </div>
-                                                <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                                    Leading strategic vision and operations with over 15 years of security industry expertise.
-                                                </p>
+                                    <h4 className="fw-bold text-dark mb-2" style={{ fontSize: '1.4rem', letterSpacing: '-0.02em' }}>Manzi Cedric</h4>
+                                    <p className="text-primary fw-semibold mb-0" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Managing Director</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Team Member 2 */}
                                     <div className="col-lg-4 col-md-6">
-                                        <div className="team-card bg-white overflow-hidden h-100" style={{
+                            <div className="team-card bg-white h-100" style={{
                                             border: '1px solid #e9ecef',
                                             borderRadius: '12px',
                                             transition: 'all 0.3s ease',
-                                            boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                                padding: '2rem'
                                         }}
                                         onMouseEnter={(e) => {
                                             e.currentTarget.style.transform = 'translateY(-5px)';
@@ -1507,87 +1458,37 @@ function Home() {
                                             e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                                             e.currentTarget.style.borderColor = '#e9ecef';
                                         }}>
-                                            <div className="position-relative">
-                                                <img src="assets/img/team-2.jpg" className="img-fluid w-100" alt="Sam Mwesigye" 
-                                                     style={{ 
-                                                         height: '320px', 
-                                                         objectFit: 'cover',
-                                                         filter: 'grayscale(20%) brightness(1.1)'
-                                                     }} />
-                                                
-                                                {/* Professional Overlay */}
-                                                <div className="position-absolute bottom-0 start-0 w-100" style={{
-                                                    background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                                                    height: '100px'
-                                                }}></div>
-                                                
-                                                {/* Social Links */}
-                                                <div className="position-absolute top-3 end-3">
-                                                    <div className="d-flex flex-column gap-2">
-                                                        <a href="#" className="btn btn-sm" style={{ 
-                                                            width: '36px', 
-                                                            height: '36px',
-                                                            background: 'rgba(255,255,255,0.9)',
-                                                            borderRadius: '8px',
+                                <div className="text-center">
+                                    {/* Icon Placeholder */}
+                                    <div className="mb-4 d-flex justify-content-center">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #0d6efd, #6f42c1)',
+                                            borderRadius: '50%',
                                                             display: 'flex',
                                                             alignItems: 'center',
                                                             justifyContent: 'center',
-                                                            transition: 'all 0.3s ease'
-                                                        }}
-                                                        onMouseEnter={(e) => {
-                                                            e.target.style.background = '#0d6efd';
-                                                            e.target.querySelector('i').style.color = 'white';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                            e.target.querySelector('i').style.color = '#0d6efd';
-                                                        }}>
-                                                            <i className="fab fa-linkedin-in" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                                        </a>
-                                                        <a href="#" className="btn btn-sm" style={{ 
-                                                            width: '36px', 
-                                                            height: '36px',
-                                                            background: 'rgba(255,255,255,0.9)',
-                                                            borderRadius: '8px',
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'center',
-                                                            transition: 'all 0.3s ease'
-                                                        }}
-                                                        onMouseEnter={(e) => {
-                                                            e.target.style.background = '#0d6efd';
-                                                            e.target.querySelector('i').style.color = 'white';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                            e.target.querySelector('i').style.color = '#0d6efd';
-                                                        }}>
-                                                            <i className="fas fa-envelope" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                                        </a>
-                                                    </div>
+                                            boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)'
+                                        }}>
+                                            <i className="fas fa-user text-white" style={{ fontSize: '2rem' }}></i>
                                                 </div>
                                             </div>
                                             
-                                            <div className="p-4 text-center">
-                                                <h4 className="fw-bold text-dark mb-1" style={{ fontSize: '1.25rem', letterSpacing: '-0.02em' }}>Sam Mwesigye</h4>
-                                                <p className="text-primary fw-semibold mb-2" style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Operations Manager</p>
-                                                <div className="d-flex justify-content-center mb-3">
-                                                    <div style={{ width: '40px', height: '2px', background: '#0d6efd' }}></div>
-                                                </div>
-                                                <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                                    Overseeing daily operations and ensuring excellence in security service delivery across all client sites.
-                                                </p>
+                                    <h4 className="fw-bold text-dark mb-2" style={{ fontSize: '1.4rem', letterSpacing: '-0.02em' }}>Sam Mwesigye</h4>
+                                    <p className="text-primary fw-semibold mb-0" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Operations Manager</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Team Member 3 */}
                                     <div className="col-lg-4 col-md-6">
-                                        <div className="team-card bg-white overflow-hidden h-100" style={{
+                            <div className="team-card bg-white h-100" style={{
                                             border: '1px solid #e9ecef',
                                             borderRadius: '12px',
                                             transition: 'all 0.3s ease',
-                                            boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                                padding: '2rem'
                                         }}
                                         onMouseEnter={(e) => {
                                             e.currentTarget.style.transform = 'translateY(-5px)';
@@ -1599,87 +1500,37 @@ function Home() {
                                             e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                                             e.currentTarget.style.borderColor = '#e9ecef';
                                         }}>
-                                            <div className="position-relative">
-                                                <img src="assets/img/team-3.jpg" className="img-fluid w-100" alt="Rwabuhungu Parfait" 
-                                                     style={{ 
-                                                         height: '320px', 
-                                                         objectFit: 'cover',
-                                                         filter: 'grayscale(20%) brightness(1.1)'
-                                                     }} />
-                                                
-                                                {/* Professional Overlay */}
-                                                <div className="position-absolute bottom-0 start-0 w-100" style={{
-                                                    background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                                                    height: '100px'
-                                                }}></div>
-                                                
-                                                {/* Social Links */}
-                                                <div className="position-absolute top-3 end-3">
-                                                    <div className="d-flex flex-column gap-2">
-                                                        <a href="#" className="btn btn-sm" style={{ 
-                                                            width: '36px', 
-                                                            height: '36px',
-                                                            background: 'rgba(255,255,255,0.9)',
-                                                            borderRadius: '8px',
+                                <div className="text-center">
+                                    {/* Icon Placeholder */}
+                                    <div className="mb-4 d-flex justify-content-center">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #0d6efd, #6f42c1)',
+                                            borderRadius: '50%',
                                                             display: 'flex',
                                                             alignItems: 'center',
                                                             justifyContent: 'center',
-                                                            transition: 'all 0.3s ease'
-                                                        }}
-                                                        onMouseEnter={(e) => {
-                                                            e.target.style.background = '#0d6efd';
-                                                            e.target.querySelector('i').style.color = 'white';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                            e.target.querySelector('i').style.color = '#0d6efd';
-                                                        }}>
-                                                            <i className="fab fa-linkedin-in" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                                        </a>
-                                                        <a href="#" className="btn btn-sm" style={{ 
-                                                            width: '36px', 
-                                                            height: '36px',
-                                                            background: 'rgba(255,255,255,0.9)',
-                                                            borderRadius: '8px',
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'center',
-                                                            transition: 'all 0.3s ease'
-                                                        }}
-                                                        onMouseEnter={(e) => {
-                                                            e.target.style.background = '#0d6efd';
-                                                            e.target.querySelector('i').style.color = 'white';
-                                                        }}
-                                                        onMouseLeave={(e) => {
-                                                            e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                            e.target.querySelector('i').style.color = '#0d6efd';
-                                                        }}>
-                                                            <i className="fas fa-envelope" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                                        </a>
-                                                    </div>
+                                            boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)'
+                                        }}>
+                                            <i className="fas fa-user text-white" style={{ fontSize: '2rem' }}></i>
                                                 </div>
                                             </div>
                                             
-                                            <div className="p-4 text-center">
-                                                <h4 className="fw-bold text-dark mb-1" style={{ fontSize: '1.25rem', letterSpacing: '-0.02em' }}>Rwabuhungu Parfait</h4>
-                                                <p className="text-primary fw-semibold mb-2" style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Sales & Marketing Manager</p>
-                                                <div className="d-flex justify-content-center mb-3">
-                                                    <div style={{ width: '40px', height: '2px', background: '#0d6efd' }}></div>
-                                                </div>
-                                                <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                                    Driving business growth through strategic marketing initiatives and building strong client relationships.
-                                                </p>
+                                    <h4 className="fw-bold text-dark mb-2" style={{ fontSize: '1.4rem', letterSpacing: '-0.02em' }}>Rwabuhungu Parfait</h4>
+                                    <p className="text-primary fw-semibold mb-0" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Sales & Marketing Manager</p>
                                             </div>
                                         </div>
                                     </div>
 
                         {/* Team Member 4 */}
                         <div className="col-lg-4 col-md-6">
-                            <div className="team-card bg-white overflow-hidden h-100" style={{
+                            <div className="team-card bg-white h-100" style={{
                                 border: '1px solid #e9ecef',
                                 borderRadius: '12px',
                                 transition: 'all 0.3s ease',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                                padding: '2rem'
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-5px)';
@@ -1691,87 +1542,37 @@ function Home() {
                                 e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                                 e.currentTarget.style.borderColor = '#e9ecef';
                             }}>
-                                <div className="position-relative">
-                                    <img src="assets/img/team-4.jpg" className="img-fluid w-100" alt="Kwizera Alexis" 
-                                         style={{ 
-                                             height: '320px', 
-                                             objectFit: 'cover',
-                                             filter: 'grayscale(20%) brightness(1.1)'
-                                         }} />
-                                    
-                                    {/* Professional Overlay */}
-                                    <div className="position-absolute bottom-0 start-0 w-100" style={{
-                                        background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                                        height: '100px'
-                                    }}></div>
-                                    
-                                    {/* Social Links */}
-                                    <div className="position-absolute top-3 end-3">
-                                        <div className="d-flex flex-column gap-2">
-                                            <a href="#" className="btn btn-sm" style={{ 
-                                                width: '36px', 
-                                                height: '36px',
-                                                background: 'rgba(255,255,255,0.9)',
-                                                borderRadius: '8px',
+                                <div className="text-center">
+                                    {/* Icon Placeholder */}
+                                    <div className="mb-4 d-flex justify-content-center">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #0d6efd, #6f42c1)',
+                                            borderRadius: '50%',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.background = '#0d6efd';
-                                                e.target.querySelector('i').style.color = 'white';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                e.target.querySelector('i').style.color = '#0d6efd';
-                                            }}>
-                                                <i className="fab fa-linkedin-in" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                            </a>
-                                            <a href="#" className="btn btn-sm" style={{ 
-                                                width: '36px', 
-                                                height: '36px',
-                                                background: 'rgba(255,255,255,0.9)',
-                                                borderRadius: '8px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.background = '#0d6efd';
-                                                e.target.querySelector('i').style.color = 'white';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                e.target.querySelector('i').style.color = '#0d6efd';
-                                            }}>
-                                                <i className="fas fa-envelope" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                            </a>
-                                        </div>
+                                            boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)'
+                                        }}>
+                                            <i className="fas fa-user text-white" style={{ fontSize: '2rem' }}></i>
                                     </div>
                                 </div>
                                 
-                                <div className="p-4 text-center">
-                                    <h4 className="fw-bold text-dark mb-1" style={{ fontSize: '1.25rem', letterSpacing: '-0.02em' }}>Kwizera Alexis</h4>
-                                    <p className="text-primary fw-semibold mb-2" style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Legal & Company Secretary</p>
-                                    <div className="d-flex justify-content-center mb-3">
-                                        <div style={{ width: '40px', height: '2px', background: '#0d6efd' }}></div>
-                                    </div>
-                                    <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                        Ensuring legal compliance and corporate governance with expertise in regulatory requirements and documentation.
-                                    </p>
+                                    <h4 className="fw-bold text-dark mb-2" style={{ fontSize: '1.4rem', letterSpacing: '-0.02em' }}>Kwizera Alexis</h4>
+                                    <p className="text-primary fw-semibold mb-0" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Legal & Company Secretary</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Team Member 5 */}
                         <div className="col-lg-4 col-md-6">
-                            <div className="team-card bg-white overflow-hidden h-100" style={{
+                            <div className="team-card bg-white h-100" style={{
                                 border: '1px solid #e9ecef',
                                 borderRadius: '12px',
                                 transition: 'all 0.3s ease',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                                padding: '2rem'
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-5px)';
@@ -1783,87 +1584,37 @@ function Home() {
                                 e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                                 e.currentTarget.style.borderColor = '#e9ecef';
                             }}>
-                                <div className="position-relative">
-                                    <img src="assets/img/team-1.jpg" className="img-fluid w-100" alt="Nyirahabimana Germaine" 
-                                         style={{ 
-                                             height: '320px', 
-                                             objectFit: 'cover',
-                                             filter: 'grayscale(20%) brightness(1.1)'
-                                         }} />
-                                    
-                                    {/* Professional Overlay */}
-                                    <div className="position-absolute bottom-0 start-0 w-100" style={{
-                                        background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                                        height: '100px'
-                                    }}></div>
-                                    
-                                    {/* Social Links */}
-                                    <div className="position-absolute top-3 end-3">
-                                        <div className="d-flex flex-column gap-2">
-                                            <a href="#" className="btn btn-sm" style={{ 
-                                                width: '36px', 
-                                                height: '36px',
-                                                background: 'rgba(255,255,255,0.9)',
-                                                borderRadius: '8px',
+                                <div className="text-center">
+                                    {/* Icon Placeholder */}
+                                    <div className="mb-4 d-flex justify-content-center">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #0d6efd, #6f42c1)',
+                                            borderRadius: '50%',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.background = '#0d6efd';
-                                                e.target.querySelector('i').style.color = 'white';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                e.target.querySelector('i').style.color = '#0d6efd';
-                                            }}>
-                                                <i className="fab fa-linkedin-in" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                            </a>
-                                            <a href="#" className="btn btn-sm" style={{ 
-                                                width: '36px', 
-                                                height: '36px',
-                                                background: 'rgba(255,255,255,0.9)',
-                                                borderRadius: '8px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.background = '#0d6efd';
-                                                e.target.querySelector('i').style.color = 'white';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                e.target.querySelector('i').style.color = '#0d6efd';
-                                            }}>
-                                                <i className="fas fa-envelope" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                            </a>
-                                        </div>
+                                            boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)'
+                                        }}>
+                                            <i className="fas fa-user text-white" style={{ fontSize: '2rem' }}></i>
                                     </div>
                                 </div>
                                 
-                                <div className="p-4 text-center">
-                                    <h4 className="fw-bold text-dark mb-1" style={{ fontSize: '1.25rem', letterSpacing: '-0.02em' }}>Nyirahabimana Germaine</h4>
-                                    <p className="text-primary fw-semibold mb-2" style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Ag Finance Manager</p>
-                                    <div className="d-flex justify-content-center mb-3">
-                                        <div style={{ width: '40px', height: '2px', background: '#0d6efd' }}></div>
-                                    </div>
-                                    <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                        Managing financial operations and ensuring fiscal responsibility with comprehensive accounting and budgeting expertise.
-                                    </p>
+                                    <h4 className="fw-bold text-dark mb-2" style={{ fontSize: '1.4rem', letterSpacing: '-0.02em' }}>Nyirahabimana Germaine</h4>
+                                    <p className="text-primary fw-semibold mb-0" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Ag Finance Manager</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Team Member 6 */}
                         <div className="col-lg-4 col-md-6">
-                            <div className="team-card bg-white overflow-hidden h-100" style={{
+                            <div className="team-card bg-white h-100" style={{
                                 border: '1px solid #e9ecef',
                                 borderRadius: '12px',
                                 transition: 'all 0.3s ease',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                                padding: '2rem'
                             }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-5px)';
@@ -1875,76 +1626,25 @@ function Home() {
                                 e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                                 e.currentTarget.style.borderColor = '#e9ecef';
                             }}>
-                                <div className="position-relative">
-                                    <img src="assets/img/team-2.jpg" className="img-fluid w-100" alt="Sifa Aline" 
-                                         style={{ 
-                                             height: '320px', 
-                                             objectFit: 'cover',
-                                             filter: 'grayscale(20%) brightness(1.1)'
-                                         }} />
-                                    
-                                    {/* Professional Overlay */}
-                                    <div className="position-absolute bottom-0 start-0 w-100" style={{
-                                        background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
-                                        height: '100px'
-                                    }}></div>
-                                    
-                                    {/* Social Links */}
-                                    <div className="position-absolute top-3 end-3">
-                                        <div className="d-flex flex-column gap-2">
-                                            <a href="#" className="btn btn-sm" style={{ 
-                                                width: '36px', 
-                                                height: '36px',
-                                                background: 'rgba(255,255,255,0.9)',
-                                                borderRadius: '8px',
+                                <div className="text-center">
+                                    {/* Icon Placeholder */}
+                                    <div className="mb-4 d-flex justify-content-center">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #0d6efd, #6f42c1)',
+                                            borderRadius: '50%',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.background = '#0d6efd';
-                                                e.target.querySelector('i').style.color = 'white';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                e.target.querySelector('i').style.color = '#0d6efd';
-                                            }}>
-                                                <i className="fab fa-linkedin-in" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                            </a>
-                                            <a href="#" className="btn btn-sm" style={{ 
-                                                width: '36px', 
-                                                height: '36px',
-                                                background: 'rgba(255,255,255,0.9)',
-                                                borderRadius: '8px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                transition: 'all 0.3s ease'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.background = '#0d6efd';
-                                                e.target.querySelector('i').style.color = 'white';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.background = 'rgba(255,255,255,0.9)';
-                                                e.target.querySelector('i').style.color = '#0d6efd';
-                                            }}>
-                                                <i className="fas fa-envelope" style={{ color: '#0d6efd', fontSize: '14px' }}></i>
-                                            </a>
-                                        </div>
+                                            boxShadow: '0 8px 25px rgba(13, 110, 253, 0.3)'
+                                        }}>
+                                            <i className="fas fa-user text-white" style={{ fontSize: '2rem' }}></i>
                                     </div>
                                 </div>
                                 
-                                <div className="p-4 text-center">
-                                    <h4 className="fw-bold text-dark mb-1" style={{ fontSize: '1.25rem', letterSpacing: '-0.02em' }}>Sifa Aline</h4>
-                                    <p className="text-primary fw-semibold mb-2" style={{ fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Ag Human Resource and Administration Manager</p>
-                                    <div className="d-flex justify-content-center mb-3">
-                                        <div style={{ width: '40px', height: '2px', background: '#0d6efd' }}></div>
-                                    </div>
-                                    <p className="text-muted mb-0" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                                        Leading human resources and administrative functions to support organizational growth and employee development.
-                                    </p>
+                                    <h4 className="fw-bold text-dark mb-2" style={{ fontSize: '1.4rem', letterSpacing: '-0.02em' }}>Sifa Aline</h4>
+                                    <p className="text-primary fw-semibold mb-0" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Ag Human Resource and Administration Manager</p>
                                 </div>
                             </div>
                         </div>
@@ -1982,7 +1682,7 @@ function Home() {
                                     </div>
                                     <div className="ms-3">
                                         <h4 className="text-primary">Call Us</h4>
-                                        <a className="h5" href="tel:+250000000000">+250 788 313 546</a>
+                                        <a className="h5" href="tel:+250788313547">0788313547</a>
                                     </div>
                                 </div>
                             </div>
@@ -2073,8 +1773,8 @@ function Home() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                             </div>

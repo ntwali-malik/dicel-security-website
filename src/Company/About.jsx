@@ -52,7 +52,7 @@ function About() {
                             {/* Small-screen contact actions */}
                             <div className="d-lg-none border-top mt-3 pt-3">
                                 <div className="d-flex align-items-center justify-content-between">
-                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>+250 788 313 547</a>
+                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>0788313547</a>
                                     <a href="mailto:info@dicel.co.rw" className="text-white text-decoration-none ms-3"><i className="fas fa-envelope me-2"></i>info@dicel.co.rw</a>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ function About() {
             {/* <!-- Hero Section Start --> */}
             <div className="container-fluid px-0 position-relative" style={{ height: '70vh', minHeight: '500px' }}>
                 <div className="position-relative w-100 h-100">
-                    <img src="assets/img/t.JPG" className="img-fluid w-100 h-100" alt="About Dicel Security" 
+                    <img src="assets/img/3.jpeg" className="img-fluid w-100 h-100" alt="About Dicel Security" 
                          style={{ objectFit: 'cover' }} />
                     {/* Brand Color Overlay */}
                     <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
@@ -278,7 +278,7 @@ function About() {
                             <div className="position-relative">
                                 {/* Main Image */}
                                 <div className="position-relative" style={{ zIndex: 2 }}>
-                                    <img src="assets/img/about-1.jpg" 
+                                    <img src="assets/img/1.jpeg" 
                                          className="img-fluid rounded-4 shadow-lg" 
                                          alt="Dicel Security Team" 
                                          style={{ 
@@ -297,7 +297,7 @@ function About() {
                                     width: '70%'
                                 }}>
                                     <div className="p-3 bg-white rounded-4 shadow-lg">
-                                        <img src="assets/img/about-2.jpg" 
+                                        <img src="assets/img/2.jpeg" 
                                              className="img-fluid rounded-3" 
                                              alt="Security Operations"
                                              style={{ 
@@ -580,8 +580,8 @@ function About() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                                 <span className="pt-3 text-light"><i className="fas fa-id-badge text-primary me-2"></i> License No. 422/0809</span>

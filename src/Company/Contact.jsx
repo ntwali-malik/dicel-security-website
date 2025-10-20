@@ -52,7 +52,7 @@ function Contact() {
                             {/* Small-screen contact actions */}
                             <div className="d-lg-none border-top mt-3 pt-3">
                                 <div className="d-flex align-items-center justify-content-between">
-                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>+250 788 313 547</a>
+                                    <a href="tel:+250788313547" className="btn btn-secondary text-white px-4 rounded-pill"><i className="fa fa-phone-alt me-2"></i>0788313547</a>
                                     <a href="mailto:info@dicel.co.rw" className="text-white text-decoration-none ms-3"><i className="fas fa-envelope me-2"></i>info@dicel.co.rw</a>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ function Contact() {
             {/* <!-- Hero Section Start --> */}
             <div className="container-fluid px-0 position-relative" style={{ height: '70vh', minHeight: '500px' }}>
                 <div className="position-relative w-100 h-100">
-                    <img src="assets/img/t.JPG" className="img-fluid w-100 h-100" alt="Contact - Dicel Security" 
+                    <img src="assets/img/3.jpeg" className="img-fluid w-100 h-100" alt="Contact - Dicel Security" 
                          style={{ objectFit: 'cover' }} />
                     {/* Brand Color Overlay */}
                     <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
@@ -218,10 +218,10 @@ function Contact() {
                                 <h5 className="fw-bold text-dark mb-3">Call Us</h5>
                                 <div className="mb-3">
                                     <a href="tel:+250788313547" className="d-block text-decoration-none text-dark fw-medium mb-2">
-                                        <i className="fas fa-phone text-primary me-2"></i>+250 788 313 547
+                                        <i className="fas fa-phone text-primary me-2"></i>0788313547
                                     </a>
-                                    <a href="tel:+250788313546" className="d-block text-decoration-none text-dark fw-medium">
-                                        <i className="fas fa-phone text-primary me-2"></i>+250 788 313 546
+                                    <a href="tel:3024" className="d-block text-decoration-none text-dark fw-medium">
+                                        <i className="fas fa-phone text-primary me-2"></i>Toll Free: 3024
                                     </a>
                                 </div>
                                 <a href="tel:+250788313547" className="btn btn-outline-success btn-sm rounded-pill">
@@ -501,8 +501,8 @@ function Contact() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                             </div>

@@ -60,8 +60,8 @@ function SecurityEquipment() {
                                 </a>
                             </div>
                             <div className="d-flex flex-column pe-4 border-end">
-                                <span className="text-white-50">Have any questions?</span>
-                                <span className="text-secondary">Call: +250 788 313 547</span>
+                                <span className="text-white">Have any questions?</span>
+                                <span className="text-white">Call: 3024</span>
                             </div>
                         </div>
                     </nav>
@@ -72,7 +72,7 @@ function SecurityEquipment() {
             {/* <!-- Hero Section Start --> */}
             <div className="container-fluid px-0 position-relative" style={{ height: '70vh', minHeight: '500px' }}>
                 <div className="position-relative w-100 h-100">
-                    <img src="assets/img/hd-ip-cameras.png" className="img-fluid w-100 h-100" alt="Security Equipment" style={{ objectFit: 'cover' }} />
+                    <img src="assets/img/28.webp" className="img-fluid w-100 h-100" alt="Security Equipment" style={{ objectFit: 'cover' }} />
                     {/* Brand Color Overlay */}
                     <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
                         background: 'linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(0, 86, 179, 0.15) 100%)',
@@ -449,7 +449,7 @@ function SecurityEquipment() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Remote Mobile Access</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Motion Detection Alerts</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Request Item</a>
                                 </div>
                             </div>
                         </div>
@@ -481,7 +481,7 @@ function SecurityEquipment() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Time & Attendance Tracking</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Multi-Level Authorization</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Request Item</a>
                                 </div>
                             </div>
                         </div>
@@ -513,7 +513,7 @@ function SecurityEquipment() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Panic Button Systems</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>24/7 Monitoring Center</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Request Item</a>
                                 </div>
                             </div>
                         </div>
@@ -545,7 +545,7 @@ function SecurityEquipment() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>X-Ray Baggage Scanners</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Multi-Zone Detection</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Request Item</a>
                                 </div>
                             </div>
                         </div>
@@ -577,7 +577,7 @@ function SecurityEquipment() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Real-time Alerts</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Detailed Reporting</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Request Item</a>
                                 </div>
                             </div>
                         </div>
@@ -609,7 +609,7 @@ function SecurityEquipment() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>System Integration</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Automated Responses</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Request Item</a>
                                 </div>
                             </div>
                         </div>
@@ -787,8 +787,8 @@ function SecurityEquipment() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                             </div>

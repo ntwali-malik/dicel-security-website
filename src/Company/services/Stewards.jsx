@@ -60,8 +60,8 @@ function Stewards() {
                                 </a>
                             </div>
                             <div className="d-flex flex-column pe-4 border-end">
-                                <span className="text-white-50">Have any questions?</span>
-                                <span className="text-secondary">Call: +250 788 313 547</span>
+                                <span className="text-white">Have any questions?</span>
+                                <span className="text-white">Call: 3024</span>
                             </div>
                         </div>
                     </nav>
@@ -72,7 +72,7 @@ function Stewards() {
             {/* <!-- Hero Section Start --> */}
             <div className="container-fluid px-0 position-relative" style={{ height: '70vh', minHeight: '500px' }}>
                 <div className="position-relative w-100 h-100">
-                    <img src="assets/img/admin.jpg" className="img-fluid w-100 h-100" alt="Event Stewardship" style={{ objectFit: 'cover' }} />
+                    <img src="assets/img/3.jpeg" className="img-fluid w-100 h-100" alt="Event Stewardship" style={{ objectFit: 'cover' }} />
                     {/* Brand Color Overlay */}
                     <div className="position-absolute w-100 h-100 top-0 start-0" style={{ 
                         background: 'linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(0, 86, 179, 0.15) 100%)',
@@ -278,7 +278,7 @@ function Stewards() {
                             <div className="position-relative">
                                 {/* Main Image */}
                                 <div className="position-relative" style={{ zIndex: 2 }}>
-                                    <img src="assets/img/admin.jpg" 
+                                    <img src="assets/img/2.jpeg" 
                                          className="img-fluid rounded-4 shadow-lg" 
                                          alt="Event Stewardship" 
                                          style={{ 
@@ -434,8 +434,8 @@ function Stewards() {
                                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                                  }}>
                                 <div className="position-relative overflow-hidden">
-                                    <img src="assets/img/admin.jpg" className="card-img-top" alt="Event Management" 
-                                         style={{ height: '250px', objectFit: 'cover' }} />
+                                    <img src="assets/img/2.jpeg" className="card-img-top" alt="Event Management" 
+                                         style={{ height: '250px', objectFit: 'cover', objectPosition: 'center top' }} />
                                     <div className="position-absolute top-0 start-0 m-3">
                                         <span className="badge bg-danger px-3 py-2 rounded-pill">EVENT MANAGEMENT</span>
                                     </div>
@@ -449,7 +449,7 @@ function Stewards() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Timeline Management</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Emergency Response Planning</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-danger w-100 rounded-pill">Plan Event Management</a>
                                 </div>
                             </div>
                         </div>
@@ -466,8 +466,8 @@ function Stewards() {
                                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                                  }}>
                                 <div className="position-relative overflow-hidden">
-                                    <img src="assets/img/project-5.jpg" className="card-img-top" alt="Crowd Control" 
-                                         style={{ height: '250px', objectFit: 'cover' }} />
+                                    <img src="assets/img/5.jpeg" className="card-img-top" alt="Crowd Control" 
+                                         style={{ height: '250px', objectFit: 'cover', objectPosition: 'center top' }} />
                                     <div className="position-absolute top-0 start-0 m-3">
                                         <span className="badge bg-warning px-3 py-2 rounded-pill">CROWD CONTROL</span>
                                     </div>
@@ -481,7 +481,7 @@ function Stewards() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Crowd Flow Optimization</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Safety Protocol Implementation</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-warning w-100 rounded-pill">Arrange Crowd Control</a>
                                 </div>
                             </div>
                         </div>
@@ -498,8 +498,8 @@ function Stewards() {
                                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                                  }}>
                                 <div className="position-relative overflow-hidden">
-                                    <img src="assets/img/project-6.jpg" className="card-img-top" alt="VIP Services" 
-                                         style={{ height: '250px', objectFit: 'cover' }} />
+                                    <img src="assets/img/21.png" className="card-img-top" alt="VIP Services" 
+                                         style={{ height: '250px', objectFit: 'cover', objectPosition: 'center top' }} />
                                     <div className="position-absolute top-0 start-0 m-3">
                                         <span className="badge bg-primary px-3 py-2 rounded-pill">VIP SERVICES</span>
                                     </div>
@@ -513,7 +513,7 @@ function Stewards() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Special Area Access Control</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Discrete Security Coordination</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-primary w-100 rounded-pill">Book VIP Services</a>
                                 </div>
                             </div>
                         </div>
@@ -531,7 +531,7 @@ function Stewards() {
                                  }}>
                                 <div className="position-relative overflow-hidden">
                                     <img src="assets/img/1.jpeg" className="card-img-top" alt="Access Control" 
-                                         style={{ height: '250px', objectFit: 'cover' }} />
+                                         style={{ height: '250px', objectFit: 'cover', objectPosition: 'center top' }} />
                                     <div className="position-absolute top-0 start-0 m-3">
                                         <span className="badge bg-success px-3 py-2 rounded-pill">ACCESS CONTROL</span>
                                     </div>
@@ -545,7 +545,7 @@ function Stewards() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Bag Inspection & Security Screening</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Guest List Management</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-success w-100 rounded-pill">Set Up Access Control</a>
                                 </div>
                             </div>
                         </div>
@@ -562,8 +562,8 @@ function Stewards() {
                                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                                  }}>
                                 <div className="position-relative overflow-hidden">
-                                    <img src="assets/img/project-3.jpg" className="card-img-top" alt="Emergency Response" 
-                                         style={{ height: '250px', objectFit: 'cover' }} />
+                                    <img src="assets/img/4.jpeg" className="card-img-top" alt="Emergency Response" 
+                                         style={{ height: '250px', objectFit: 'cover', objectPosition: 'center top' }} />
                                     <div className="position-absolute top-0 start-0 m-3">
                                         <span className="badge bg-info px-3 py-2 rounded-pill">EMERGENCY</span>
                                     </div>
@@ -577,7 +577,7 @@ function Stewards() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Incident Management</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Authority Coordination</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-info w-100 rounded-pill">Prepare Emergency Response</a>
                                 </div>
                             </div>
                         </div>
@@ -594,8 +594,8 @@ function Stewards() {
                                      e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
                                  }}>
                                 <div className="position-relative overflow-hidden">
-                                    <img src="assets/img/team-1.jpg" className="card-img-top" alt="Customer Service" 
-                                         style={{ height: '250px', objectFit: 'cover' }} />
+                                    <img src="assets/img/5.jpeg" className="card-img-top" alt="Customer Service" 
+                                         style={{ height: '250px', objectFit: 'cover', objectPosition: 'center top' }} />
                                     <div className="position-absolute top-0 start-0 m-3">
                                         <span className="badge bg-secondary px-3 py-2 rounded-pill">GUEST SERVICES</span>
                                     </div>
@@ -609,7 +609,7 @@ function Stewards() {
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Special Needs Assistance</li>
                                         <li className="mb-2"><i className="fas fa-check-circle text-success me-2"></i>Complaint Resolution</li>
                                     </ul>
-                                    <a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Learn More</a>
+                                    <a href="/contact" className="btn btn-outline-secondary w-100 rounded-pill">Enhance Guest Services</a>
                                 </div>
                             </div>
                         </div>
@@ -624,7 +624,7 @@ function Stewards() {
                     <div className="row mb-5">
                         <div className="col-lg-8 mx-auto text-center">
                             <h2 className="display-5 fw-bold text-white mb-3">Our Event Management Process</h2>
-                            <p className="lead text-white-75">A systematic approach to ensure flawless event execution.</p>
+                            <p className="lead text-white">A systematic approach to ensure flawless event execution.</p>
                         </div>
                     </div>
                     
@@ -803,8 +803,8 @@ function Stewards() {
                             <a href="#" className="h4 text-primary">Contact Us</a>
                             <div className="text-white mt-4 d-flex flex-column contact-link">
                                 <span className="pb-3 text-light border-bottom border-primary"><i className="fas fa-map-marker-alt text-primary me-2"></i> KK 467 St, Kagarama Sector (Kanserege Cell), Kicukiro, Kigali, Rwanda</span>
-                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 547</a>
-                                <a href="tel:+250788313546" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> +250 788 313 546</a>
+                                <a href="tel:+250788313547" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> 0788313547</a>
+                                <a href="tel:3024" className="py-3 text-light border-bottom border-primary"><i className="fas fa-phone-alt text-primary me-2"></i> Toll Free: 3024</a>
                                 <a href="mailto:info@dicel.co.rw" className="py-3 text-light border-bottom border-primary"><i className="fas fa-envelope text-primary me-2"></i> info@dicel.co.rw</a>
                                 <span className="pt-3 text-light"><i className="fas fa-clock text-primary me-2"></i> Opening Hours: Mon–Fri 07:30–17:30</span>
                             </div>
